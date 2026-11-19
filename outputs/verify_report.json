@@ -1,0 +1,172 @@
+{
+  "store": "tugraph-rest",
+  "note": "已连接 TuGraph REST：http://127.0.0.1:7070 / graph=medical_course_2026",
+  "checks": [
+    {
+      "name": "节点总数与导出文件一致",
+      "ok": true,
+      "detail": "图库 93 / 文件 93"
+    },
+    {
+      "name": "关系总数与导出文件一致",
+      "ok": true,
+      "detail": "图库 138 / 文件 138"
+    },
+    {
+      "name": "各标签节点数一致",
+      "ok": true,
+      "detail": "Department 4/4、Disease 33/33、Drug 13/13、Examination 18/18、Symptom 25/25"
+    },
+    {
+      "name": "各关系类型边数一致",
+      "ok": true,
+      "detail": "BELONGS_TO 32/32、HAS_SYMPTOM 46/46、REQUIRES_EXAM 39/39、USES_DRUG 21/21"
+    },
+    {
+      "name": "节点标签均在 Schema 内",
+      "ok": true,
+      "detail": "5 类标签全部登记"
+    },
+    {
+      "name": "关系类型均在 Schema 内",
+      "ok": true,
+      "detail": "4 类关系全部登记"
+    },
+    {
+      "name": "关系方向与头尾标签正确",
+      "ok": true,
+      "detail": "全部正确"
+    },
+    {
+      "name": "抽查：图谱规模",
+      "ok": true,
+      "detail": "1 行｜节点数 / --- / 93 "
+    },
+    {
+      "name": "抽查：关系规模",
+      "ok": true,
+      "detail": "1 行｜关系数 / --- / 138"
+    },
+    {
+      "name": "抽查：标签分布",
+      "ok": true,
+      "detail": "5 行｜名称    / ----- / 心血管内科 / 消化内科  / 神经内科  / ... 共 5 行，仅显示前 3 行"
+    },
+    {
+      "name": "抽查：疾病-症状抽样",
+      "ok": true,
+      "detail": "5 行｜疾病     | 症状 | 来源   / -------+----+----- / 上消化道出血 | 乏力 | Q030 / 上消化道出血 | 头晕 | Q030 / 上消化道出血"
+    },
+    {
+      "name": "抽查：疾病-检查抽样",
+      "ok": true,
+      "detail": "5 行｜疾病      | 检查    | 性质          / --------+-------+------------ / 上消化道出血  | 胃镜    | unspecif"
+    },
+    {
+      "name": "抽查：癫痫相关",
+      "ok": true,
+      "detail": "5 行｜关联实体  | 来源   / ------+----- / 卡马西平  | Q031 / 左乙拉西坦 | Q031 / 神经内科  | Q031 / ... 共 5 行，仅显示前 "
+    },
+    {
+      "name": "癫痫需要做的检查是 2 项",
+      "ok": true,
+      "detail": "实际 2，期望 2"
+    },
+    {
+      "name": "冠心病症状是 2 项",
+      "ok": true,
+      "detail": "实际 2，期望 2"
+    },
+    {
+      "name": "高血压所属科室唯一",
+      "ok": true,
+      "detail": "实际 1，期望 1"
+    },
+    {
+      "name": "疾病总数与导出文件一致",
+      "ok": true,
+      "detail": "实际 33，期望 33"
+    },
+    {
+      "name": "质量门禁：Schema合规率",
+      "ok": true,
+      "detail": "实际 100.00%，期望 100.00%"
+    },
+    {
+      "name": "质量门禁：属性完整率",
+      "ok": true,
+      "detail": "实际 100.00%，期望 100.00%"
+    },
+    {
+      "name": "质量门禁：重复三元组",
+      "ok": true,
+      "detail": "实际 0，期望 0"
+    },
+    {
+      "name": "质量门禁：最大连通分量占比",
+      "ok": true,
+      "detail": "实际 96.77%，期望 96.77%"
+    },
+    {
+      "name": "质量门禁：问答覆盖率 ≥ 90%",
+      "ok": true,
+      "detail": "实际 92.50%"
+    }
+  ],
+  "spot_checks": [
+    {
+      "title": "图谱规模",
+      "cypher": "MATCH (n) RETURN count(n) AS 节点数",
+      "ok": true,
+      "detail": "1 行"
+    },
+    {
+      "title": "关系规模",
+      "cypher": "MATCH ()-[r]->() RETURN count(r) AS 关系数",
+      "ok": true,
+      "detail": "1 行"
+    },
+    {
+      "title": "标签分布",
+      "cypher": "MATCH (n) RETURN n.id AS 名称 LIMIT 5",
+      "ok": true,
+      "detail": "5 行"
+    },
+    {
+      "title": "疾病-症状抽样",
+      "cypher": "MATCH (d:Disease)-[r:HAS_SYMPTOM]->(s:Symptom) RETURN d.name AS 疾病, s.name AS 症状, r.qa_id AS 来源 LIMIT 5",
+      "ok": true,
+      "detail": "5 行"
+    },
+    {
+      "title": "疾病-检查抽样",
+      "cypher": "MATCH (d:Disease)-[r:REQUIRES_EXAM]->(e:Examination) RETURN d.name AS 疾病, e.name AS 检查, r.scope AS 性质 LIMIT 5",
+      "ok": true,
+      "detail": "5 行"
+    },
+    {
+      "title": "癫痫相关",
+      "cypher": "MATCH (d:Disease {name: '癫痫'})-[r]->(x) RETURN x.name AS 关联实体, r.qa_id AS 来源 LIMIT 10",
+      "ok": true,
+      "detail": "5 行"
+    }
+  ],
+  "quality": {
+    "节点数": 93,
+    "关系数": 138,
+    "节点标签覆盖": "5/5",
+    "关系类型覆盖": "4/4",
+    "Schema合规率": "100.00%",
+    "属性完整率": "100.00%",
+    "重复三元组": 0,
+    "检查强度不一致": 2,
+    "待人工审核项": 11,
+    "孤立节点": 3,
+    "弱连通分量": 4,
+    "最大连通分量占比": "96.77%",
+    "平均度": 2.97,
+    "问答覆盖率": "92.50%",
+    "科室覆盖": "4/4"
+  },
+  "failed": 0
+}

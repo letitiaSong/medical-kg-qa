@@ -1,0 +1,92 @@
+{
+  "metrics": {
+    "节点数": 93,
+    "关系数": 138,
+    "节点标签覆盖": "5/5",
+    "关系类型覆盖": "4/4",
+    "Schema合规率": "100.00%",
+    "属性完整率": "100.00%",
+    "重复三元组": 0,
+    "检查强度不一致": 2,
+    "待人工审核项": 11,
+    "孤立节点": 3,
+    "弱连通分量": 4,
+    "最大连通分量占比": "96.77%",
+    "平均度": 2.97,
+    "问答覆盖率": "92.50%",
+    "科室覆盖": "4/4"
+  },
+  "details": {
+    "illegal_labels": [],
+    "illegal_relations": [],
+    "wrong_direction": [],
+    "missing_description": [],
+    "missing_source": [],
+    "missing_evidence": [],
+    "missing_scope": [],
+    "duplicate_triples": [],
+    "scope_inconsistent": {
+      "冠心病": [
+        "recommend",
+        "unspecified"
+      ],
+      "高血压": [
+        "definite",
+        "recommend"
+      ]
+    },
+    "isolated_nodes": [
+      "Disease:糖尿病",
+      "Symptom:体重下降",
+      "Disease:面神经炎"
+    ],
+    "multi_tail_relations": {
+      "肝炎-BELONGS_TO": 2,
+      "上消化道出血-HAS_SYMPTOM": 3,
+      "偏头痛-HAS_SYMPTOM": 2,
+      "冠心病-HAS_SYMPTOM": 2,
+      "帕金森病-HAS_SYMPTOM": 2,
+      "心力衰竭-HAS_SYMPTOM": 2,
+      "心房颤动-HAS_SYMPTOM": 3,
+      "心肌梗死-HAS_SYMPTOM": 2,
+      "急性胰腺炎-HAS_SYMPTOM": 3,
+      "慢性胃炎-HAS_SYMPTOM": 3
+    },
+    "component_sizes": [
+      90,
+      1,
+      1,
+      1
+    ],
+    "nodes_by_label": {
+      "Department": 4,
+      "Disease": 33,
+      "Drug": 13,
+      "Examination": 18,
+      "Symptom": 25
+    },
+    "edges_by_rel": {
+      "BELONGS_TO": 32,
+      "HAS_SYMPTOM": 46,
+      "REQUIRES_EXAM": 39,
+      "USES_DRUG": 21
+    },
+    "uncovered_qa": [
+      "Q008",
+      "Q024",
+      "Q028"
+    ]
+  },
+  "backend": {
+    "backend": "tugraph-rest",
+    "base_url": "http://127.0.0.1:7070",
+    "graph": "medical_course_2026",
+    "user": "admin",
+    "auth": "jwt",
+    "root_status": 200
+  },
+  "graph": {
+    "nodes": 93,
+    "edges": 138
+  }
+}

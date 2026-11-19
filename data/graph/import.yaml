@@ -1,0 +1,112 @@
+schema:
+  - label: Disease
+    type: VERTEX
+    primary: id
+    properties:
+      - name: id
+        type: STRING
+      - name: name
+        type: STRING
+      - name: description
+        type: STRING
+  - label: Symptom
+    type: VERTEX
+    primary: id
+    properties:
+      - name: id
+        type: STRING
+      - name: name
+        type: STRING
+      - name: description
+        type: STRING
+  - label: Drug
+    type: VERTEX
+    primary: id
+    properties:
+      - name: id
+        type: STRING
+      - name: name
+        type: STRING
+      - name: description
+        type: STRING
+  - label: Department
+    type: VERTEX
+    primary: id
+    properties:
+      - name: id
+        type: STRING
+      - name: name
+        type: STRING
+      - name: description
+        type: STRING
+  - label: Examination
+    type: VERTEX
+    primary: id
+    properties:
+      - name: id
+        type: STRING
+      - name: name
+        type: STRING
+      - name: description
+        type: STRING
+  - label: HAS_SYMPTOM
+    type: EDGE
+    constraints: [Disease, Symptom]
+    properties:
+      - name: qa_id
+        type: STRING
+      - name: evidence
+        type: STRING
+      - name: weight
+        type: DOUBLE
+  - label: USES_DRUG
+    type: EDGE
+    constraints: [Disease, Drug]
+    properties:
+      - name: qa_id
+        type: STRING
+      - name: evidence
+        type: STRING
+      - name: weight
+        type: DOUBLE
+  - label: BELONGS_TO
+    type: EDGE
+    constraints: [Disease, Department]
+    properties:
+      - name: qa_id
+        type: STRING
+      - name: evidence
+        type: STRING
+      - name: weight
+        type: DOUBLE
+  - label: REQUIRES_EXAM
+    type: EDGE
+    constraints: [Disease, Examination]
+    properties:
+      - name: qa_id
+        type: STRING
+      - name: evidence
+        type: STRING
+      - name: weight
+        type: DOUBLE
+      - name: scope
+        type: STRING
+files:
+  - path: by_label/vertex_Disease.csv
+    type: CSV
+    header: true
+  - path: by_label/vertex_Symptom.csv
+    type: CSV
+    header: true
+  - path: by_label/vertex_Drug.csv
+    type: CSV
+    header: true
+  - path: by_label/vertex_Department.csv
+    type: CSV
+    header: true
+  - path: by_label/vertex_Examination.csv
+    type: CSV
+    header: true
+  - path: edges.csv
+    type: CSV
+    header: true

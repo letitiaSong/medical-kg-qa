@@ -1,0 +1,193 @@
+{
+  "clean": {
+    "total": 40,
+    "kept": 40,
+    "dropped": 0,
+    "duplicates": [],
+    "warnings": [],
+    "by_department": {
+      "心血管内科": 10,
+      "肝病科": 10,
+      "消化内科": 10,
+      "神经内科": 10
+    },
+    "avg_len": 88.67
+  },
+  "dictionary": {
+    "entities": 93,
+    "aliases": 125,
+    "by_type": {
+      "Disease": 33,
+      "Symptom": 25,
+      "Drug": 13,
+      "Department": 4,
+      "Examination": 18
+    }
+  },
+  "gold": {
+    "qa": 40,
+    "mentions": 192,
+    "relations": 141
+  },
+  "ner": {
+    "naive": {
+      "micro": {
+        "tp": 184,
+        "fp": 13,
+        "fn": 8,
+        "precision": 0.934,
+        "recall": 0.9583,
+        "f1": 0.946
+      },
+      "macro_f1": 0.9463,
+      "per_label": {
+        "Disease": {
+          "tp": 43,
+          "fp": 4,
+          "fn": 4,
+          "precision": 0.9149,
+          "recall": 0.9149,
+          "f1": 0.9149
+        },
+        "Symptom": {
+          "tp": 50,
+          "fp": 6,
+          "fn": 0,
+          "precision": 0.8929,
+          "recall": 1.0,
+          "f1": 0.9434
+        },
+        "Drug": {
+          "tp": 27,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1.0,
+          "recall": 0.9643,
+          "f1": 0.9818
+        },
+        "Department": {
+          "tp": 16,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "Examination": {
+          "tp": 48,
+          "fp": 3,
+          "fn": 3,
+          "precision": 0.9412,
+          "recall": 0.9412,
+          "f1": 0.9412
+        }
+      }
+    },
+    "longest": {
+      "micro": {
+        "tp": 180,
+        "fp": 3,
+        "fn": 12,
+        "precision": 0.9836,
+        "recall": 0.9375,
+        "f1": 0.96
+      },
+      "macro_f1": 0.9562,
+      "per_label": {
+        "Disease": {
+          "tp": 41,
+          "fp": 1,
+          "fn": 6,
+          "precision": 0.9762,
+          "recall": 0.8723,
+          "f1": 0.9213
+        },
+        "Symptom": {
+          "tp": 50,
+          "fp": 2,
+          "fn": 0,
+          "precision": 0.9615,
+          "recall": 1.0,
+          "f1": 0.9804
+        },
+        "Drug": {
+          "tp": 27,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1.0,
+          "recall": 0.9643,
+          "f1": 0.9818
+        },
+        "Department": {
+          "tp": 16,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "Examination": {
+          "tp": 46,
+          "fp": 0,
+          "fn": 5,
+          "precision": 1.0,
+          "recall": 0.902,
+          "f1": 0.9485
+        }
+      }
+    },
+    "synonym": {
+      "micro": {
+        "tp": 184,
+        "fp": 4,
+        "fn": 8,
+        "precision": 0.9787,
+        "recall": 0.9583,
+        "f1": 0.9684
+      },
+      "macro_f1": 0.966,
+      "per_label": {
+        "Disease": {
+          "tp": 43,
+          "fp": 1,
+          "fn": 4,
+          "precision": 0.9773,
+          "recall": 0.9149,
+          "f1": 0.9451
+        },
+        "Symptom": {
+          "tp": 50,
+          "fp": 2,
+          "fn": 0,
+          "precision": 0.9615,
+          "recall": 1.0,
+          "f1": 0.9804
+        },
+        "Drug": {
+          "tp": 27,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1.0,
+          "recall": 0.9643,
+          "f1": 0.9818
+        },
+        "Department": {
+          "tp": 16,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "Examination": {
+          "tp": 48,
+          "fp": 1,
+          "fn": 3,
+          "precision": 0.9796,
+          "recall": 0.9412,
+          "f1": 0.96
+        }
+      }
+    }
+  }
+}

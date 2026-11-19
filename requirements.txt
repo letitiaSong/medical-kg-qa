@@ -1,0 +1,11 @@
+# 依赖说明：本项目核心流程只依赖 Python 标准库（urllib/json/csv/re/argparse），
+# 下面这些包是为了「连真实 TuGraph」「跑 Web 服务」「处理表格」等可选能力。
+# 安装：pip install -r requirements.txt
+requests>=2.28        # TuGraph REST 客户端、LLM HTTP 调用（缺省时自动退回 urllib）
+pandas>=1.5           # 数据清洗与统计（脚本 01 使用）
+python-dotenv>=1.0    # 读取 .env 配置
+fastapi>=0.110        # 可选：Web 接口
+uvicorn>=0.27         # 可选：启动 Web 接口
+pydantic>=2.0         # fastapi 依赖
+openpyxl>=3.1         # 可选：导出 Excel 版评测结果
+python-docx>=1.1      # 可选：由 Markdown 生成实验报告 docx

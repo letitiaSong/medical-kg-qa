@@ -1,0 +1,2292 @@
+{
+ "graphs": {
+  "medical_course_2026": {
+   "nodes": [
+    {
+     "id": "心血管内科",
+     "label": "Department",
+     "props": {
+      "id": "心血管内科",
+      "name": "心血管内科",
+      "description": "来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "消化内科",
+     "label": "Department",
+     "props": {
+      "id": "消化内科",
+      "name": "消化内科",
+      "description": "来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "神经内科",
+     "label": "Department",
+     "props": {
+      "id": "神经内科",
+      "name": "神经内科",
+      "description": "来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "肝病科",
+     "label": "Department",
+     "props": {
+      "id": "肝病科",
+      "name": "肝病科",
+      "description": "来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "三叉神经痛",
+     "label": "Disease",
+     "props": {
+      "id": "三叉神经痛",
+      "name": "三叉神经痛",
+      "description": "面部闪电样剧痛；来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "上消化道出血",
+     "label": "Disease",
+     "props": {
+      "id": "上消化道出血",
+      "name": "上消化道出血",
+      "description": "别名：消化道出血；来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "乙型病毒性肝炎",
+     "label": "Disease",
+     "props": {
+      "id": "乙型病毒性肝炎",
+      "name": "乙型病毒性肝炎",
+      "description": "别名：乙肝、乙肝小三阳、乙肝病毒性肝炎；来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "偏头痛",
+     "label": "Disease",
+     "props": {
+      "id": "偏头痛",
+      "name": "偏头痛",
+      "description": "来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "冠心病",
+     "label": "Disease",
+     "props": {
+      "id": "冠心病",
+      "name": "冠心病",
+      "description": "别名：冠状动脉粥样硬化性心脏病；来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "失眠",
+     "label": "Disease",
+     "props": {
+      "id": "失眠",
+      "name": "失眠",
+      "description": "来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "帕金森病",
+     "label": "Disease",
+     "props": {
+      "id": "帕金森病",
+      "name": "帕金森病",
+      "description": "来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "心力衰竭",
+     "label": "Disease",
+     "props": {
+      "id": "心力衰竭",
+      "name": "心力衰竭",
+      "description": "别名：心衰；来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "心律失常",
+     "label": "Disease",
+     "props": {
+      "id": "心律失常",
+      "name": "心律失常",
+      "description": "泛指节律异常；来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "心房颤动",
+     "label": "Disease",
+     "props": {
+      "id": "心房颤动",
+      "name": "心房颤动",
+      "description": "别名：房颤；来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "心肌梗死",
+     "label": "Disease",
+     "props": {
+      "id": "心肌梗死",
+      "name": "心肌梗死",
+      "description": "别名：心梗；来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "急性胰腺炎",
+     "label": "Disease",
+     "props": {
+      "id": "急性胰腺炎",
+      "name": "急性胰腺炎",
+      "description": "需与胆囊结石关联；来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "慢性胃炎",
+     "label": "Disease",
+     "props": {
+      "id": "慢性胃炎",
+      "name": "慢性胃炎",
+      "description": "消化内科常见病；别名：萎缩性胃炎、非萎缩性胃炎；来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "焦虑障碍",
+     "label": "Disease",
+     "props": {
+      "id": "焦虑障碍",
+      "name": "焦虑障碍",
+      "description": "来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "癫痫",
+     "label": "Disease",
+     "props": {
+      "id": "癫痫",
+      "name": "癫痫",
+      "description": "来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "糖尿病",
+     "label": "Disease",
+     "props": {
+      "id": "糖尿病",
+      "name": "糖尿病",
+      "description": "合并高血压场景；来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "结肠息肉",
+     "label": "Disease",
+     "props": {
+      "id": "结肠息肉",
+      "name": "结肠息肉",
+      "description": "腺瘤性息肉；来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "肝炎",
+     "label": "Disease",
+     "props": {
+      "id": "肝炎",
+      "name": "肝炎",
+      "description": "泛指肝炎（Q018 主病种）；来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "肝癌",
+     "label": "Disease",
+     "props": {
+      "id": "肝癌",
+      "name": "肝癌",
+      "description": "由肝囊肿问题引出；来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "肝硬化",
+     "label": "Disease",
+     "props": {
+      "id": "肝硬化",
+      "name": "肝硬化",
+      "description": "含失代偿期；来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "肠易激综合征",
+     "label": "Disease",
+     "props": {
+      "id": "肠易激综合征",
+      "name": "肠易激综合征",
+      "description": "功能性肠病；别名：IBS；来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "胃溃疡",
+     "label": "Disease",
+     "props": {
+      "id": "胃溃疡",
+      "name": "胃溃疡",
+      "description": "餐后上腹痛；别名：消化性溃疡；来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "胃食管反流病",
+     "label": "Disease",
+     "props": {
+      "id": "胃食管反流病",
+      "name": "胃食管反流病",
+      "description": "GERD，典型症状为反酸烧心；别名：胃食管反流、反流性食管炎；来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "胆囊结石",
+     "label": "Disease",
+     "props": {
+      "id": "胆囊结石",
+      "name": "胆囊结石",
+      "description": "别名：胆结石；来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "脑梗死",
+     "label": "Disease",
+     "props": {
+      "id": "脑梗死",
+      "name": "脑梗死",
+      "description": "别名：脑梗；来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "良性阵发性位置性眩晕",
+     "label": "Disease",
+     "props": {
+      "id": "良性阵发性位置性眩晕",
+      "name": "良性阵发性位置性眩晕",
+      "description": "BPPV，位置试验可诊断；别名：耳石症；来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "药物性肝损伤",
+     "label": "Disease",
+     "props": {
+      "id": "药物性肝损伤",
+      "name": "药物性肝损伤",
+      "description": "保健品/药物相关；来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "血脂异常",
+     "label": "Disease",
+     "props": {
+      "id": "血脂异常",
+      "name": "血脂异常",
+      "description": "别名：血脂高、高血脂；来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "酒精性肝病",
+     "label": "Disease",
+     "props": {
+      "id": "酒精性肝病",
+      "name": "酒精性肝病",
+      "description": "别名：酒精肝；来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "阿尔茨海默病",
+     "label": "Disease",
+     "props": {
+      "id": "阿尔茨海默病",
+      "name": "阿尔茨海默病",
+      "description": "老年认知障碍；来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "面瘫",
+     "label": "Disease",
+     "props": {
+      "id": "面瘫",
+      "name": "面瘫",
+      "description": "别名：周围性面瘫；来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "面神经炎",
+     "label": "Disease",
+     "props": {
+      "id": "面神经炎",
+      "name": "面神经炎",
+      "description": "周围性面瘫的病因；来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "高血压",
+     "label": "Disease",
+     "props": {
+      "id": "高血压",
+      "name": "高血压",
+      "description": "心血管内科常见慢病；别名：血压高、高血压病；来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "卡马西平",
+     "label": "Drug",
+     "props": {
+      "id": "卡马西平",
+      "name": "卡马西平",
+      "description": "抗癫痫/三叉神经痛；来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "呋塞米",
+     "label": "Drug",
+     "props": {
+      "id": "呋塞米",
+      "name": "呋塞米",
+      "description": "袢利尿剂；来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "多奈哌齐",
+     "label": "Drug",
+     "props": {
+      "id": "多奈哌齐",
+      "name": "多奈哌齐",
+      "description": "胆碱酯酶抑制剂；来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "奥美拉唑",
+     "label": "Drug",
+     "props": {
+      "id": "奥美拉唑",
+      "name": "奥美拉唑",
+      "description": "质子泵抑制剂；来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "左乙拉西坦",
+     "label": "Drug",
+     "props": {
+      "id": "左乙拉西坦",
+      "name": "左乙拉西坦",
+      "description": "抗癫痫；来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "左旋多巴",
+     "label": "Drug",
+     "props": {
+      "id": "左旋多巴",
+      "name": "左旋多巴",
+      "description": "帕金森病替代治疗；来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "恩替卡韦",
+     "label": "Drug",
+     "props": {
+      "id": "恩替卡韦",
+      "name": "恩替卡韦",
+      "description": "核苷类抗病毒；来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "氨氯地平",
+     "label": "Drug",
+     "props": {
+      "id": "氨氯地平",
+      "name": "氨氯地平",
+      "description": "钙通道阻滞剂；来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "生长抑素",
+     "label": "Drug",
+     "props": {
+      "id": "生长抑素",
+      "name": "生长抑素",
+      "description": "抑制胰酶分泌；来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "美托洛尔",
+     "label": "Drug",
+     "props": {
+      "id": "美托洛尔",
+      "name": "美托洛尔",
+      "description": "β受体阻滞剂；来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "蒙脱石散",
+     "label": "Drug",
+     "props": {
+      "id": "蒙脱石散",
+      "name": "蒙脱石散",
+      "description": "止泻；来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "阿司匹林",
+     "label": "Drug",
+     "props": {
+      "id": "阿司匹林",
+      "name": "阿司匹林",
+      "description": "抗血小板；来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "阿托伐他汀",
+     "label": "Drug",
+     "props": {
+      "id": "阿托伐他汀",
+      "name": "阿托伐他汀",
+      "description": "他汀类调脂；来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "动态心电图",
+     "label": "Examination",
+     "props": {
+      "id": "动态心电图",
+      "name": "动态心电图",
+      "description": "别名：24小时动态心电图；来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "头颅CT",
+     "label": "Examination",
+     "props": {
+      "id": "头颅CT",
+      "name": "头颅CT",
+      "description": "来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "幽门螺杆菌检测",
+     "label": "Examination",
+     "props": {
+      "id": "幽门螺杆菌检测",
+      "name": "幽门螺杆菌检测",
+      "description": "呼气试验/病理；来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "心电图",
+     "label": "Examination",
+     "props": {
+      "id": "心电图",
+      "name": "心电图",
+      "description": "来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "心脏超声",
+     "label": "Examination",
+     "props": {
+      "id": "心脏超声",
+      "name": "心脏超声",
+      "description": "别名：超声心动图；来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "空腹血糖",
+     "label": "Examination",
+     "props": {
+      "id": "空腹血糖",
+      "name": "空腹血糖",
+      "description": "来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "糖化血红蛋白",
+     "label": "Examination",
+     "props": {
+      "id": "糖化血红蛋白",
+      "name": "糖化血红蛋白",
+      "description": "来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "肌电图",
+     "label": "Examination",
+     "props": {
+      "id": "肌电图",
+      "name": "肌电图",
+      "description": "来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "肝功能检查",
+     "label": "Examination",
+     "props": {
+      "id": "肝功能检查",
+      "name": "肝功能检查",
+      "description": "来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "肠镜",
+     "label": "Examination",
+     "props": {
+      "id": "肠镜",
+      "name": "肠镜",
+      "description": "含结肠镜；来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "胃镜",
+     "label": "Examination",
+     "props": {
+      "id": "胃镜",
+      "name": "胃镜",
+      "description": "来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "脑电图",
+     "label": "Examination",
+     "props": {
+      "id": "脑电图",
+      "name": "脑电图",
+      "description": "来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "腹部超声",
+     "label": "Examination",
+     "props": {
+      "id": "腹部超声",
+      "name": "腹部超声",
+      "description": "肝/胆/胰/脾；来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "血BNP",
+     "label": "Examination",
+     "props": {
+      "id": "血BNP",
+      "name": "血BNP",
+      "description": "别名：脑钠肽；来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "血压测定",
+     "label": "Examination",
+     "props": {
+      "id": "血压测定",
+      "name": "血压测定",
+      "description": "短别名\"血压\"会引入边界误匹配；别名：测量血压、测血压、血压；来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "血常规",
+     "label": "Examination",
+     "props": {
+      "id": "血常规",
+      "name": "血常规",
+      "description": "来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "血脂检查",
+     "label": "Examination",
+     "props": {
+      "id": "血脂检查",
+      "name": "血脂检查",
+      "description": "来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "视频脑电图检查",
+     "label": "Examination",
+     "props": {
+      "id": "视频脑电图检查",
+      "name": "视频脑电图检查",
+      "description": "长程视频脑电；来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "上腹痛",
+     "label": "Symptom",
+     "props": {
+      "id": "上腹痛",
+      "name": "上腹痛",
+      "description": "餐后上腹痛；来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "乏力",
+     "label": "Symptom",
+     "props": {
+      "id": "乏力",
+      "name": "乏力",
+      "description": "来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "体重下降",
+     "label": "Symptom",
+     "props": {
+      "id": "体重下降",
+      "name": "体重下降",
+      "description": "来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "便秘",
+     "label": "Symptom",
+     "props": {
+      "id": "便秘",
+      "name": "便秘",
+      "description": "来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "反酸",
+     "label": "Symptom",
+     "props": {
+      "id": "反酸",
+      "name": "反酸",
+      "description": "来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "呕吐",
+     "label": "Symptom",
+     "props": {
+      "id": "呕吐",
+      "name": "呕吐",
+      "description": "来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "嗳气",
+     "label": "Symptom",
+     "props": {
+      "id": "嗳气",
+      "name": "嗳气",
+      "description": "俗称打嗝；来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "头晕",
+     "label": "Symptom",
+     "props": {
+      "id": "头晕",
+      "name": "头晕",
+      "description": "来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "头痛",
+     "label": "Symptom",
+     "props": {
+      "id": "头痛",
+      "name": "头痛",
+      "description": "来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "心悸",
+     "label": "Symptom",
+     "props": {
+      "id": "心悸",
+      "name": "心悸",
+      "description": "来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "恶心",
+     "label": "Symptom",
+     "props": {
+      "id": "恶心",
+      "name": "恶心",
+      "description": "来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "气促",
+     "label": "Symptom",
+     "props": {
+      "id": "气促",
+      "name": "气促",
+      "description": "来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "水肿",
+     "label": "Symptom",
+     "props": {
+      "id": "水肿",
+      "name": "水肿",
+      "description": "别名：下肢水肿、踝部水肿；来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "烧心",
+     "label": "Symptom",
+     "props": {
+      "id": "烧心",
+      "name": "烧心",
+      "description": "来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "眩晕",
+     "label": "Symptom",
+     "props": {
+      "id": "眩晕",
+      "name": "眩晕",
+      "description": "天旋地转；来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "胸痛",
+     "label": "Symptom",
+     "props": {
+      "id": "胸痛",
+      "name": "胸痛",
+      "description": "含\"胸口疼\"的规范表达；来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "胸闷",
+     "label": "Symptom",
+     "props": {
+      "id": "胸闷",
+      "name": "胸闷",
+      "description": "来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "腹水",
+     "label": "Symptom",
+     "props": {
+      "id": "腹水",
+      "name": "腹水",
+      "description": "肝硬化失代偿体征；来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "腹泻",
+     "label": "Symptom",
+     "props": {
+      "id": "腹泻",
+      "name": "腹泻",
+      "description": "来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "腹痛",
+     "label": "Symptom",
+     "props": {
+      "id": "腹痛",
+      "name": "腹痛",
+      "description": "上腹痛的下位词（最长匹配优先）；来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "腹胀",
+     "label": "Symptom",
+     "props": {
+      "id": "腹胀",
+      "name": "腹胀",
+      "description": "来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "震颤",
+     "label": "Symptom",
+     "props": {
+      "id": "震颤",
+      "name": "震颤",
+      "description": "别名：手抖；来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "食欲减退",
+     "label": "Symptom",
+     "props": {
+      "id": "食欲减退",
+      "name": "食欲减退",
+      "description": "来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "黄疸",
+     "label": "Symptom",
+     "props": {
+      "id": "黄疸",
+      "name": "黄疸",
+      "description": "皮肤巩膜黄染；来源：课堂问答整理，未经医学核验"
+     }
+    },
+    {
+     "id": "黑便",
+     "label": "Symptom",
+     "props": {
+      "id": "黑便",
+      "name": "黑便",
+      "description": "来源：课堂问答整理，未经医学核验"
+     }
+    }
+   ],
+   "edges": [
+    {
+     "src": "三叉神经痛",
+     "dst": "神经内科",
+     "rel": "BELONGS_TO",
+     "props": {
+      "qa_id": "Q040",
+      "evidence": "脸上一阵一阵剧痛",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "上消化道出血",
+     "dst": "消化内科",
+     "rel": "BELONGS_TO",
+     "props": {
+      "qa_id": "Q030",
+      "evidence": "突然黑便头晕",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "乙型病毒性肝炎",
+     "dst": "肝病科",
+     "rel": "BELONGS_TO",
+     "props": {
+      "qa_id": "Q012;Q017;Q019",
+      "evidence": "乙肝小三阳要不要抗病毒",
+      "weight": 1.0
+     }
+    },
+    {
+     "src": "偏头痛",
+     "dst": "神经内科",
+     "rel": "BELONGS_TO",
+     "props": {
+      "qa_id": "Q032",
+      "evidence": "一侧头痛反复发作",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "冠心病",
+     "dst": "心血管内科",
+     "rel": "BELONGS_TO",
+     "props": {
+      "qa_id": "Q002;Q009",
+      "evidence": "冠心病会胸口疼吗",
+      "weight": 0.8
+     }
+    },
+    {
+     "src": "失眠",
+     "dst": "神经内科",
+     "rel": "BELONGS_TO",
+     "props": {
+      "qa_id": "Q035",
+      "evidence": "长期失眠要吃安眠药吗",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "帕金森病",
+     "dst": "神经内科",
+     "rel": "BELONGS_TO",
+     "props": {
+      "qa_id": "Q034",
+      "evidence": "手抖动作变慢",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "心力衰竭",
+     "dst": "心血管内科",
+     "rel": "BELONGS_TO",
+     "props": {
+      "qa_id": "Q004",
+      "evidence": "晚上躺不平双腿水肿",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "心律失常",
+     "dst": "心血管内科",
+     "rel": "BELONGS_TO",
+     "props": {
+      "qa_id": "Q005",
+      "evidence": "体检查出室性早搏",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "心房颤动",
+     "dst": "心血管内科",
+     "rel": "BELONGS_TO",
+     "props": {
+      "qa_id": "Q003",
+      "evidence": "心慌心跳不整齐怎么查",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "心肌梗死",
+     "dst": "心血管内科",
+     "rel": "BELONGS_TO",
+     "props": {
+      "qa_id": "Q007",
+      "evidence": "剧烈胸痛出冷汗",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "急性胰腺炎",
+     "dst": "消化内科",
+     "rel": "BELONGS_TO",
+     "props": {
+      "qa_id": "Q026",
+      "evidence": "上腹剧痛还呕吐",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "慢性胃炎",
+     "dst": "消化内科",
+     "rel": "BELONGS_TO",
+     "props": {
+      "qa_id": "Q022",
+      "evidence": "慢性胃炎要不要吃药",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "焦虑障碍",
+     "dst": "神经内科",
+     "rel": "BELONGS_TO",
+     "props": {
+      "qa_id": "Q036",
+      "evidence": "总是心慌紧张",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "癫痫",
+     "dst": "神经内科",
+     "rel": "BELONGS_TO",
+     "props": {
+      "qa_id": "Q031",
+      "evidence": "癫痫可以做哪些检查",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "结肠息肉",
+     "dst": "消化内科",
+     "rel": "BELONGS_TO",
+     "props": {
+      "qa_id": "Q029",
+      "evidence": "肠镜发现结肠息肉",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "肝炎",
+     "dst": "消化内科",
+     "rel": "BELONGS_TO",
+     "props": {
+      "qa_id": "Q018",
+      "evidence": "眼睛发黄尿黄",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "肝炎",
+     "dst": "肝病科",
+     "rel": "BELONGS_TO",
+     "props": {
+      "qa_id": "Q011;Q018",
+      "evidence": "体检查出脂肪肝",
+      "weight": 0.8
+     }
+    },
+    {
+     "src": "肝癌",
+     "dst": "肝病科",
+     "rel": "BELONGS_TO",
+     "props": {
+      "qa_id": "Q015",
+      "evidence": "体检发现肝囊肿",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "肝硬化",
+     "dst": "肝病科",
+     "rel": "BELONGS_TO",
+     "props": {
+      "qa_id": "Q013;Q020",
+      "evidence": "肝硬化腹水肚子胀",
+      "weight": 0.8
+     }
+    },
+    {
+     "src": "肠易激综合征",
+     "dst": "消化内科",
+     "rel": "BELONGS_TO",
+     "props": {
+      "qa_id": "Q025",
+      "evidence": "反复腹痛拉肚子",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "胃溃疡",
+     "dst": "消化内科",
+     "rel": "BELONGS_TO",
+     "props": {
+      "qa_id": "Q023",
+      "evidence": "胃溃疡会癌变吗",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "胃食管反流病",
+     "dst": "消化内科",
+     "rel": "BELONGS_TO",
+     "props": {
+      "qa_id": "Q021",
+      "evidence": "总是反酸烧心",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "胆囊结石",
+     "dst": "消化内科",
+     "rel": "BELONGS_TO",
+     "props": {
+      "qa_id": "Q027",
+      "evidence": "胆结石要不要手术",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "脑梗死",
+     "dst": "神经内科",
+     "rel": "BELONGS_TO",
+     "props": {
+      "qa_id": "Q033",
+      "evidence": "脑梗后手脚无力",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "良性阵发性位置性眩晕",
+     "dst": "神经内科",
+     "rel": "BELONGS_TO",
+     "props": {
+      "qa_id": "Q038",
+      "evidence": "一躺下就天旋地转",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "药物性肝损伤",
+     "dst": "肝病科",
+     "rel": "BELONGS_TO",
+     "props": {
+      "qa_id": "Q014",
+      "evidence": "保健品引起转氨酶升高",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "血脂异常",
+     "dst": "心血管内科",
+     "rel": "BELONGS_TO",
+     "props": {
+      "qa_id": "Q006",
+      "evidence": "血脂高要不要吃他汀",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "酒精性肝病",
+     "dst": "肝病科",
+     "rel": "BELONGS_TO",
+     "props": {
+      "qa_id": "Q016",
+      "evidence": "酒精肝还能喝酒吗",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "阿尔茨海默病",
+     "dst": "神经内科",
+     "rel": "BELONGS_TO",
+     "props": {
+      "qa_id": "Q039",
+      "evidence": "老人记性越来越差",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "面瘫",
+     "dst": "神经内科",
+     "rel": "BELONGS_TO",
+     "props": {
+      "qa_id": "Q037",
+      "evidence": "突然嘴歪眼斜",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "高血压",
+     "dst": "心血管内科",
+     "rel": "BELONGS_TO",
+     "props": {
+      "qa_id": "Q001;Q010",
+      "evidence": "高血压患者头晕要做什么检查",
+      "weight": 0.8
+     }
+    },
+    {
+     "src": "上消化道出血",
+     "dst": "乏力",
+     "rel": "HAS_SYMPTOM",
+     "props": {
+      "qa_id": "Q030",
+      "evidence": "突然黑便头晕",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "上消化道出血",
+     "dst": "头晕",
+     "rel": "HAS_SYMPTOM",
+     "props": {
+      "qa_id": "Q030",
+      "evidence": "突然黑便头晕",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "上消化道出血",
+     "dst": "黑便",
+     "rel": "HAS_SYMPTOM",
+     "props": {
+      "qa_id": "Q030",
+      "evidence": "突然黑便头晕",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "偏头痛",
+     "dst": "头痛",
+     "rel": "HAS_SYMPTOM",
+     "props": {
+      "qa_id": "Q032",
+      "evidence": "一侧头痛反复发作",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "偏头痛",
+     "dst": "恶心",
+     "rel": "HAS_SYMPTOM",
+     "props": {
+      "qa_id": "Q032",
+      "evidence": "一侧头痛反复发作",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "冠心病",
+     "dst": "胸痛",
+     "rel": "HAS_SYMPTOM",
+     "props": {
+      "qa_id": "Q002",
+      "evidence": "冠心病会胸口疼吗",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "冠心病",
+     "dst": "胸闷",
+     "rel": "HAS_SYMPTOM",
+     "props": {
+      "qa_id": "Q002",
+      "evidence": "冠心病会胸口疼吗",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "帕金森病",
+     "dst": "便秘",
+     "rel": "HAS_SYMPTOM",
+     "props": {
+      "qa_id": "Q034",
+      "evidence": "手抖动作变慢",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "帕金森病",
+     "dst": "震颤",
+     "rel": "HAS_SYMPTOM",
+     "props": {
+      "qa_id": "Q034",
+      "evidence": "手抖动作变慢",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "心力衰竭",
+     "dst": "气促",
+     "rel": "HAS_SYMPTOM",
+     "props": {
+      "qa_id": "Q004",
+      "evidence": "晚上躺不平双腿水肿",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "心力衰竭",
+     "dst": "水肿",
+     "rel": "HAS_SYMPTOM",
+     "props": {
+      "qa_id": "Q004",
+      "evidence": "晚上躺不平双腿水肿",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "心律失常",
+     "dst": "心悸",
+     "rel": "HAS_SYMPTOM",
+     "props": {
+      "qa_id": "Q005",
+      "evidence": "体检查出室性早搏",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "心房颤动",
+     "dst": "乏力",
+     "rel": "HAS_SYMPTOM",
+     "props": {
+      "qa_id": "Q003",
+      "evidence": "心慌心跳不整齐怎么查",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "心房颤动",
+     "dst": "头晕",
+     "rel": "HAS_SYMPTOM",
+     "props": {
+      "qa_id": "Q003",
+      "evidence": "心慌心跳不整齐怎么查",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "心房颤动",
+     "dst": "心悸",
+     "rel": "HAS_SYMPTOM",
+     "props": {
+      "qa_id": "Q003",
+      "evidence": "心慌心跳不整齐怎么查",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "心肌梗死",
+     "dst": "胸痛",
+     "rel": "HAS_SYMPTOM",
+     "props": {
+      "qa_id": "Q007",
+      "evidence": "剧烈胸痛出冷汗",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "心肌梗死",
+     "dst": "胸闷",
+     "rel": "HAS_SYMPTOM",
+     "props": {
+      "qa_id": "Q007",
+      "evidence": "剧烈胸痛出冷汗",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "急性胰腺炎",
+     "dst": "上腹痛",
+     "rel": "HAS_SYMPTOM",
+     "props": {
+      "qa_id": "Q026",
+      "evidence": "上腹剧痛还呕吐",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "急性胰腺炎",
+     "dst": "呕吐",
+     "rel": "HAS_SYMPTOM",
+     "props": {
+      "qa_id": "Q026",
+      "evidence": "上腹剧痛还呕吐",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "急性胰腺炎",
+     "dst": "恶心",
+     "rel": "HAS_SYMPTOM",
+     "props": {
+      "qa_id": "Q026",
+      "evidence": "上腹剧痛还呕吐",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "慢性胃炎",
+     "dst": "上腹痛",
+     "rel": "HAS_SYMPTOM",
+     "props": {
+      "qa_id": "Q022",
+      "evidence": "慢性胃炎要不要吃药",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "慢性胃炎",
+     "dst": "嗳气",
+     "rel": "HAS_SYMPTOM",
+     "props": {
+      "qa_id": "Q022",
+      "evidence": "慢性胃炎要不要吃药",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "慢性胃炎",
+     "dst": "腹胀",
+     "rel": "HAS_SYMPTOM",
+     "props": {
+      "qa_id": "Q022",
+      "evidence": "慢性胃炎要不要吃药",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "焦虑障碍",
+     "dst": "心悸",
+     "rel": "HAS_SYMPTOM",
+     "props": {
+      "qa_id": "Q036",
+      "evidence": "总是心慌紧张",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "肝炎",
+     "dst": "乏力",
+     "rel": "HAS_SYMPTOM",
+     "props": {
+      "qa_id": "Q011",
+      "evidence": "体检查出脂肪肝",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "肝炎",
+     "dst": "黄疸",
+     "rel": "HAS_SYMPTOM",
+     "props": {
+      "qa_id": "Q018",
+      "evidence": "眼睛发黄尿黄",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "肝癌",
+     "dst": "腹胀",
+     "rel": "HAS_SYMPTOM",
+     "props": {
+      "qa_id": "Q015",
+      "evidence": "体检发现肝囊肿",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "肝硬化",
+     "dst": "乏力",
+     "rel": "HAS_SYMPTOM",
+     "props": {
+      "qa_id": "Q013",
+      "evidence": "肝硬化腹水肚子胀",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "肝硬化",
+     "dst": "腹水",
+     "rel": "HAS_SYMPTOM",
+     "props": {
+      "qa_id": "Q013;Q020",
+      "evidence": "肝硬化腹水肚子胀",
+      "weight": 0.8
+     }
+    },
+    {
+     "src": "肝硬化",
+     "dst": "腹胀",
+     "rel": "HAS_SYMPTOM",
+     "props": {
+      "qa_id": "Q013;Q020",
+      "evidence": "肝硬化腹水肚子胀",
+      "weight": 0.8
+     }
+    },
+    {
+     "src": "肝硬化",
+     "dst": "黄疸",
+     "rel": "HAS_SYMPTOM",
+     "props": {
+      "qa_id": "Q013",
+      "evidence": "肝硬化腹水肚子胀",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "肝硬化",
+     "dst": "黑便",
+     "rel": "HAS_SYMPTOM",
+     "props": {
+      "qa_id": "Q020",
+      "evidence": "肝硬化患者的饮食",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "肠易激综合征",
+     "dst": "便秘",
+     "rel": "HAS_SYMPTOM",
+     "props": {
+      "qa_id": "Q025",
+      "evidence": "反复腹痛拉肚子",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "肠易激综合征",
+     "dst": "腹泻",
+     "rel": "HAS_SYMPTOM",
+     "props": {
+      "qa_id": "Q025",
+      "evidence": "反复腹痛拉肚子",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "肠易激综合征",
+     "dst": "腹痛",
+     "rel": "HAS_SYMPTOM",
+     "props": {
+      "qa_id": "Q025",
+      "evidence": "反复腹痛拉肚子",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "胃溃疡",
+     "dst": "上腹痛",
+     "rel": "HAS_SYMPTOM",
+     "props": {
+      "qa_id": "Q023",
+      "evidence": "胃溃疡会癌变吗",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "胃溃疡",
+     "dst": "反酸",
+     "rel": "HAS_SYMPTOM",
+     "props": {
+      "qa_id": "Q023",
+      "evidence": "胃溃疡会癌变吗",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "胃溃疡",
+     "dst": "恶心",
+     "rel": "HAS_SYMPTOM",
+     "props": {
+      "qa_id": "Q023",
+      "evidence": "胃溃疡会癌变吗",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "胃食管反流病",
+     "dst": "反酸",
+     "rel": "HAS_SYMPTOM",
+     "props": {
+      "qa_id": "Q021",
+      "evidence": "总是反酸烧心",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "胃食管反流病",
+     "dst": "烧心",
+     "rel": "HAS_SYMPTOM",
+     "props": {
+      "qa_id": "Q021",
+      "evidence": "总是反酸烧心",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "胆囊结石",
+     "dst": "上腹痛",
+     "rel": "HAS_SYMPTOM",
+     "props": {
+      "qa_id": "Q027",
+      "evidence": "胆结石要不要手术",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "良性阵发性位置性眩晕",
+     "dst": "眩晕",
+     "rel": "HAS_SYMPTOM",
+     "props": {
+      "qa_id": "Q038",
+      "evidence": "一躺下就天旋地转",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "药物性肝损伤",
+     "dst": "乏力",
+     "rel": "HAS_SYMPTOM",
+     "props": {
+      "qa_id": "Q014",
+      "evidence": "保健品引起转氨酶升高",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "药物性肝损伤",
+     "dst": "食欲减退",
+     "rel": "HAS_SYMPTOM",
+     "props": {
+      "qa_id": "Q014",
+      "evidence": "保健品引起转氨酶升高",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "药物性肝损伤",
+     "dst": "黄疸",
+     "rel": "HAS_SYMPTOM",
+     "props": {
+      "qa_id": "Q014",
+      "evidence": "保健品引起转氨酶升高",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "高血压",
+     "dst": "头晕",
+     "rel": "HAS_SYMPTOM",
+     "props": {
+      "qa_id": "Q001",
+      "evidence": "高血压患者头晕要做什么检查",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "上消化道出血",
+     "dst": "胃镜",
+     "rel": "REQUIRES_EXAM",
+     "props": {
+      "qa_id": "Q030",
+      "evidence": "突然黑便头晕",
+      "weight": 0.6,
+      "scope": "unspecified"
+     }
+    },
+    {
+     "src": "上消化道出血",
+     "dst": "血常规",
+     "rel": "REQUIRES_EXAM",
+     "props": {
+      "qa_id": "Q030",
+      "evidence": "突然黑便头晕",
+      "weight": 0.6,
+      "scope": "unspecified"
+     }
+    },
+    {
+     "src": "乙型病毒性肝炎",
+     "dst": "肝功能检查",
+     "rel": "REQUIRES_EXAM",
+     "props": {
+      "qa_id": "Q012;Q017;Q019",
+      "evidence": "乙肝小三阳要不要抗病毒",
+      "weight": 1.0,
+      "scope": "recommend"
+     }
+    },
+    {
+     "src": "乙型病毒性肝炎",
+     "dst": "腹部超声",
+     "rel": "REQUIRES_EXAM",
+     "props": {
+      "qa_id": "Q012;Q019",
+      "evidence": "乙肝小三阳要不要抗病毒",
+      "weight": 0.8,
+      "scope": "recommend"
+     }
+    },
+    {
+     "src": "偏头痛",
+     "dst": "头颅CT",
+     "rel": "REQUIRES_EXAM",
+     "props": {
+      "qa_id": "Q032",
+      "evidence": "一侧头痛反复发作",
+      "weight": 0.6,
+      "scope": "recommend"
+     }
+    },
+    {
+     "src": "冠心病",
+     "dst": "心电图",
+     "rel": "REQUIRES_EXAM",
+     "props": {
+      "qa_id": "Q002;Q009",
+      "evidence": "冠心病会胸口疼吗",
+      "weight": 0.8,
+      "scope": "recommend"
+     }
+    },
+    {
+     "src": "冠心病",
+     "dst": "心脏超声",
+     "rel": "REQUIRES_EXAM",
+     "props": {
+      "qa_id": "Q002",
+      "evidence": "冠心病会胸口疼吗",
+      "weight": 0.6,
+      "scope": "recommend"
+     }
+    },
+    {
+     "src": "冠心病",
+     "dst": "血脂检查",
+     "rel": "REQUIRES_EXAM",
+     "props": {
+      "qa_id": "Q009",
+      "evidence": "冠心病支架术后用药",
+      "weight": 0.6,
+      "scope": "unspecified"
+     }
+    },
+    {
+     "src": "心力衰竭",
+     "dst": "心脏超声",
+     "rel": "REQUIRES_EXAM",
+     "props": {
+      "qa_id": "Q004",
+      "evidence": "晚上躺不平双腿水肿",
+      "weight": 0.6,
+      "scope": "definite"
+     }
+    },
+    {
+     "src": "心力衰竭",
+     "dst": "血BNP",
+     "rel": "REQUIRES_EXAM",
+     "props": {
+      "qa_id": "Q004",
+      "evidence": "晚上躺不平双腿水肿",
+      "weight": 0.6,
+      "scope": "definite"
+     }
+    },
+    {
+     "src": "心律失常",
+     "dst": "动态心电图",
+     "rel": "REQUIRES_EXAM",
+     "props": {
+      "qa_id": "Q005",
+      "evidence": "体检查出室性早搏",
+      "weight": 0.6,
+      "scope": "recommend"
+     }
+    },
+    {
+     "src": "心律失常",
+     "dst": "心脏超声",
+     "rel": "REQUIRES_EXAM",
+     "props": {
+      "qa_id": "Q005",
+      "evidence": "体检查出室性早搏",
+      "weight": 0.6,
+      "scope": "recommend"
+     }
+    },
+    {
+     "src": "心房颤动",
+     "dst": "动态心电图",
+     "rel": "REQUIRES_EXAM",
+     "props": {
+      "qa_id": "Q003",
+      "evidence": "心慌心跳不整齐怎么查",
+      "weight": 0.6,
+      "scope": "definite"
+     }
+    },
+    {
+     "src": "心房颤动",
+     "dst": "心电图",
+     "rel": "REQUIRES_EXAM",
+     "props": {
+      "qa_id": "Q003",
+      "evidence": "心慌心跳不整齐怎么查",
+      "weight": 0.6,
+      "scope": "definite"
+     }
+    },
+    {
+     "src": "心肌梗死",
+     "dst": "心电图",
+     "rel": "REQUIRES_EXAM",
+     "props": {
+      "qa_id": "Q007",
+      "evidence": "剧烈胸痛出冷汗",
+      "weight": 0.6,
+      "scope": "unspecified"
+     }
+    },
+    {
+     "src": "慢性胃炎",
+     "dst": "幽门螺杆菌检测",
+     "rel": "REQUIRES_EXAM",
+     "props": {
+      "qa_id": "Q022",
+      "evidence": "慢性胃炎要不要吃药",
+      "weight": 0.6,
+      "scope": "recommend"
+     }
+    },
+    {
+     "src": "慢性胃炎",
+     "dst": "胃镜",
+     "rel": "REQUIRES_EXAM",
+     "props": {
+      "qa_id": "Q022",
+      "evidence": "慢性胃炎要不要吃药",
+      "weight": 0.6,
+      "scope": "recommend"
+     }
+    },
+    {
+     "src": "癫痫",
+     "dst": "脑电图",
+     "rel": "REQUIRES_EXAM",
+     "props": {
+      "qa_id": "Q031",
+      "evidence": "癫痫可以做哪些检查",
+      "weight": 0.6,
+      "scope": "recommend"
+     }
+    },
+    {
+     "src": "癫痫",
+     "dst": "视频脑电图检查",
+     "rel": "REQUIRES_EXAM",
+     "props": {
+      "qa_id": "Q031",
+      "evidence": "癫痫可以做哪些检查",
+      "weight": 0.6,
+      "scope": "recommend"
+     }
+    },
+    {
+     "src": "结肠息肉",
+     "dst": "肠镜",
+     "rel": "REQUIRES_EXAM",
+     "props": {
+      "qa_id": "Q029",
+      "evidence": "肠镜发现结肠息肉",
+      "weight": 0.6,
+      "scope": "definite"
+     }
+    },
+    {
+     "src": "肝炎",
+     "dst": "肝功能检查",
+     "rel": "REQUIRES_EXAM",
+     "props": {
+      "qa_id": "Q011;Q018",
+      "evidence": "体检查出脂肪肝",
+      "weight": 0.8,
+      "scope": "recommend"
+     }
+    },
+    {
+     "src": "肝炎",
+     "dst": "腹部超声",
+     "rel": "REQUIRES_EXAM",
+     "props": {
+      "qa_id": "Q011;Q018",
+      "evidence": "体检查出脂肪肝",
+      "weight": 0.8,
+      "scope": "recommend"
+     }
+    },
+    {
+     "src": "肝癌",
+     "dst": "腹部超声",
+     "rel": "REQUIRES_EXAM",
+     "props": {
+      "qa_id": "Q015",
+      "evidence": "体检发现肝囊肿",
+      "weight": 0.6,
+      "scope": "recommend"
+     }
+    },
+    {
+     "src": "肝硬化",
+     "dst": "肝功能检查",
+     "rel": "REQUIRES_EXAM",
+     "props": {
+      "qa_id": "Q013",
+      "evidence": "肝硬化腹水肚子胀",
+      "weight": 0.6,
+      "scope": "unspecified"
+     }
+    },
+    {
+     "src": "肝硬化",
+     "dst": "腹部超声",
+     "rel": "REQUIRES_EXAM",
+     "props": {
+      "qa_id": "Q013",
+      "evidence": "肝硬化腹水肚子胀",
+      "weight": 0.6,
+      "scope": "unspecified"
+     }
+    },
+    {
+     "src": "肠易激综合征",
+     "dst": "肠镜",
+     "rel": "REQUIRES_EXAM",
+     "props": {
+      "qa_id": "Q025",
+      "evidence": "反复腹痛拉肚子",
+      "weight": 0.6,
+      "scope": "recommend"
+     }
+    },
+    {
+     "src": "胃溃疡",
+     "dst": "胃镜",
+     "rel": "REQUIRES_EXAM",
+     "props": {
+      "qa_id": "Q023",
+      "evidence": "胃溃疡会癌变吗",
+      "weight": 0.6,
+      "scope": "unspecified"
+     }
+    },
+    {
+     "src": "胃食管反流病",
+     "dst": "胃镜",
+     "rel": "REQUIRES_EXAM",
+     "props": {
+      "qa_id": "Q021",
+      "evidence": "总是反酸烧心",
+      "weight": 0.6,
+      "scope": "unspecified"
+     }
+    },
+    {
+     "src": "胆囊结石",
+     "dst": "腹部超声",
+     "rel": "REQUIRES_EXAM",
+     "props": {
+      "qa_id": "Q027",
+      "evidence": "胆结石要不要手术",
+      "weight": 0.6,
+      "scope": "definite"
+     }
+    },
+    {
+     "src": "药物性肝损伤",
+     "dst": "肝功能检查",
+     "rel": "REQUIRES_EXAM",
+     "props": {
+      "qa_id": "Q014",
+      "evidence": "保健品引起转氨酶升高",
+      "weight": 0.6,
+      "scope": "recommend"
+     }
+    },
+    {
+     "src": "血脂异常",
+     "dst": "血脂检查",
+     "rel": "REQUIRES_EXAM",
+     "props": {
+      "qa_id": "Q006",
+      "evidence": "血脂高要不要吃他汀",
+      "weight": 0.6,
+      "scope": "recommend"
+     }
+    },
+    {
+     "src": "酒精性肝病",
+     "dst": "肝功能检查",
+     "rel": "REQUIRES_EXAM",
+     "props": {
+      "qa_id": "Q016",
+      "evidence": "酒精肝还能喝酒吗",
+      "weight": 0.6,
+      "scope": "recommend"
+     }
+    },
+    {
+     "src": "酒精性肝病",
+     "dst": "腹部超声",
+     "rel": "REQUIRES_EXAM",
+     "props": {
+      "qa_id": "Q016",
+      "evidence": "酒精肝还能喝酒吗",
+      "weight": 0.6,
+      "scope": "recommend"
+     }
+    },
+    {
+     "src": "面瘫",
+     "dst": "肌电图",
+     "rel": "REQUIRES_EXAM",
+     "props": {
+      "qa_id": "Q037",
+      "evidence": "突然嘴歪眼斜",
+      "weight": 0.6,
+      "scope": "unspecified"
+     }
+    },
+    {
+     "src": "高血压",
+     "dst": "心电图",
+     "rel": "REQUIRES_EXAM",
+     "props": {
+      "qa_id": "Q001",
+      "evidence": "高血压患者头晕要做什么检查",
+      "weight": 0.6,
+      "scope": "definite"
+     }
+    },
+    {
+     "src": "高血压",
+     "dst": "空腹血糖",
+     "rel": "REQUIRES_EXAM",
+     "props": {
+      "qa_id": "Q010",
+      "evidence": "高血压合并糖尿病",
+      "weight": 0.6,
+      "scope": "recommend"
+     }
+    },
+    {
+     "src": "高血压",
+     "dst": "糖化血红蛋白",
+     "rel": "REQUIRES_EXAM",
+     "props": {
+      "qa_id": "Q010",
+      "evidence": "高血压合并糖尿病",
+      "weight": 0.6,
+      "scope": "recommend"
+     }
+    },
+    {
+     "src": "高血压",
+     "dst": "血压测定",
+     "rel": "REQUIRES_EXAM",
+     "props": {
+      "qa_id": "Q001;Q010",
+      "evidence": "高血压患者头晕要做什么检查",
+      "weight": 0.8,
+      "scope": "definite"
+     }
+    },
+    {
+     "src": "高血压",
+     "dst": "血脂检查",
+     "rel": "REQUIRES_EXAM",
+     "props": {
+      "qa_id": "Q001",
+      "evidence": "高血压患者头晕要做什么检查",
+      "weight": 0.6,
+      "scope": "definite"
+     }
+    },
+    {
+     "src": "三叉神经痛",
+     "dst": "卡马西平",
+     "rel": "USES_DRUG",
+     "props": {
+      "qa_id": "Q040",
+      "evidence": "脸上一阵一阵剧痛",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "乙型病毒性肝炎",
+     "dst": "恩替卡韦",
+     "rel": "USES_DRUG",
+     "props": {
+      "qa_id": "Q012;Q017",
+      "evidence": "乙肝小三阳要不要抗病毒",
+      "weight": 0.8
+     }
+    },
+    {
+     "src": "冠心病",
+     "dst": "阿司匹林",
+     "rel": "USES_DRUG",
+     "props": {
+      "qa_id": "Q002;Q009",
+      "evidence": "冠心病会胸口疼吗",
+      "weight": 0.8
+     }
+    },
+    {
+     "src": "冠心病",
+     "dst": "阿托伐他汀",
+     "rel": "USES_DRUG",
+     "props": {
+      "qa_id": "Q002",
+      "evidence": "冠心病会胸口疼吗",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "帕金森病",
+     "dst": "左旋多巴",
+     "rel": "USES_DRUG",
+     "props": {
+      "qa_id": "Q034",
+      "evidence": "手抖动作变慢",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "心力衰竭",
+     "dst": "呋塞米",
+     "rel": "USES_DRUG",
+     "props": {
+      "qa_id": "Q004",
+      "evidence": "晚上躺不平双腿水肿",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "心律失常",
+     "dst": "美托洛尔",
+     "rel": "USES_DRUG",
+     "props": {
+      "qa_id": "Q005",
+      "evidence": "体检查出室性早搏",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "心肌梗死",
+     "dst": "阿司匹林",
+     "rel": "USES_DRUG",
+     "props": {
+      "qa_id": "Q007",
+      "evidence": "剧烈胸痛出冷汗",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "急性胰腺炎",
+     "dst": "生长抑素",
+     "rel": "USES_DRUG",
+     "props": {
+      "qa_id": "Q026",
+      "evidence": "上腹剧痛还呕吐",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "慢性胃炎",
+     "dst": "奥美拉唑",
+     "rel": "USES_DRUG",
+     "props": {
+      "qa_id": "Q022",
+      "evidence": "慢性胃炎要不要吃药",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "癫痫",
+     "dst": "卡马西平",
+     "rel": "USES_DRUG",
+     "props": {
+      "qa_id": "Q031",
+      "evidence": "癫痫可以做哪些检查",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "癫痫",
+     "dst": "左乙拉西坦",
+     "rel": "USES_DRUG",
+     "props": {
+      "qa_id": "Q031",
+      "evidence": "癫痫可以做哪些检查",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "肝硬化",
+     "dst": "呋塞米",
+     "rel": "USES_DRUG",
+     "props": {
+      "qa_id": "Q013",
+      "evidence": "肝硬化腹水肚子胀",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "肠易激综合征",
+     "dst": "蒙脱石散",
+     "rel": "USES_DRUG",
+     "props": {
+      "qa_id": "Q025",
+      "evidence": "反复腹痛拉肚子",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "胃溃疡",
+     "dst": "奥美拉唑",
+     "rel": "USES_DRUG",
+     "props": {
+      "qa_id": "Q023",
+      "evidence": "胃溃疡会癌变吗",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "胃食管反流病",
+     "dst": "奥美拉唑",
+     "rel": "USES_DRUG",
+     "props": {
+      "qa_id": "Q021",
+      "evidence": "总是反酸烧心",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "脑梗死",
+     "dst": "阿司匹林",
+     "rel": "USES_DRUG",
+     "props": {
+      "qa_id": "Q033",
+      "evidence": "脑梗后手脚无力",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "脑梗死",
+     "dst": "阿托伐他汀",
+     "rel": "USES_DRUG",
+     "props": {
+      "qa_id": "Q033",
+      "evidence": "脑梗后手脚无力",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "血脂异常",
+     "dst": "阿托伐他汀",
+     "rel": "USES_DRUG",
+     "props": {
+      "qa_id": "Q006",
+      "evidence": "血脂高要不要吃他汀",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "阿尔茨海默病",
+     "dst": "多奈哌齐",
+     "rel": "USES_DRUG",
+     "props": {
+      "qa_id": "Q039",
+      "evidence": "老人记性越来越差",
+      "weight": 0.6
+     }
+    },
+    {
+     "src": "高血压",
+     "dst": "氨氯地平",
+     "rel": "USES_DRUG",
+     "props": {
+      "qa_id": "Q001;Q010",
+      "evidence": "高血压患者头晕要做什么检查",
+      "weight": 0.8
+     }
+    }
+   ],
+   "schema": {
+    "labels": [
+     "Disease",
+     "Symptom",
+     "Drug",
+     "Department",
+     "Examination"
+    ],
+    "rels": [
+     "HAS_SYMPTOM",
+     "USES_DRUG",
+     "BELONGS_TO",
+     "REQUIRES_EXAM"
+    ],
+    "ddl": [
+     "CALL db.createVertexLabel('Disease', 'id', 'id', 'STRING', false, 'name', 'STRING', true, 'description', 'STRING', true)",
+     "CALL db.createVertexLabel('Symptom', 'id', 'id', 'STRING', false, 'name', 'STRING', true, 'description', 'STRING', true)",
+     "CALL db.createVertexLabel('Drug', 'id', 'id', 'STRING', false, 'name', 'STRING', true, 'description', 'STRING', true)",
+     "CALL db.createVertexLabel('Department', 'id', 'id', 'STRING', false, 'name', 'STRING', true, 'description', 'STRING', true)",
+     "CALL db.createVertexLabel('Examination', 'id', 'id', 'STRING', false, 'name', 'STRING', true, 'description', 'STRING', true)",
+     "CALL db.createEdgeLabel('HAS_SYMPTOM', '[]', 'qa_id', 'STRING', true, 'evidence', 'STRING', true, 'weight', 'DOUBLE', true)",
+     "CALL db.createEdgeLabel('USES_DRUG', '[]', 'qa_id', 'STRING', true, 'evidence', 'STRING', true, 'weight', 'DOUBLE', true)",
+     "CALL db.createEdgeLabel('BELONGS_TO', '[]', 'qa_id', 'STRING', true, 'evidence', 'STRING', true, 'weight', 'DOUBLE', true)",
+     "CALL db.createEdgeLabel('REQUIRES_EXAM', '[]', 'qa_id', 'STRING', true, 'evidence', 'STRING', true, 'weight', 'DOUBLE', true, 'scope', 'STRING', true)"
+    ]
+   }
+  }
+ }
+}

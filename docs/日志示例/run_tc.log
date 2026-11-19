@@ -1,0 +1,34 @@
+﻿==============================================================
+步骤 1 / TuGraph Python 客户端连接测试
+==============================================================
+目标：http://127.0.0.1:7070
+账号：admin / **********
+图名：medical_course_2026
+客户端：requests 2.34.2
+
+[1/3] GET http://127.0.0.1:7070/
+  响应：<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="shortcut icon" href="/resource/assets/favicon.png">
+<title>TuGraph DB</title>
+<script src="/resource/preload_helper.ececc8a8.js"></script>
+</head>
+<body>
+<div id="root"></div>
+<script src="/resource/umi.2c58b720.js"></script>
+</body>
+</html>
+
+[2/3] POST http://127.0.0.1:7070/login
+  响应：{"default_password":true,"is_admin":true,"jwt":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdF9sb2dpbl90aW1lIjoiMTc5NTA2MDgzMC45ODM1MjkiLCJpc3MiOiJmbWEuYWkiLCJyZWZyZXNoX3RpbWUiOiIxNzk1MDYwODMwLjk4MzUyMCJ9.quyrvL9ntx8Q1GW0u9TR1BxoHTyLmjLbq-hAsfEvt3E"}
+  JWT 长度 201，前 24 位：eyJhbGciOiJIUzI1NiIsInR5...
+
+[3/3] POST http://127.0.0.1:7070/cypher  （RETURN 1）
+  响应：{"elapsed":0.00015234947204589844,"header":[{"name":"ok","type":0}],"result":[[1]],"size":1}
+
+连接测试通过：客户端已能登录 TuGraph 并执行 Cypher。
+下一步：python scripts/init_schema.py   # 建标签

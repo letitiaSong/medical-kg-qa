@@ -1,0 +1,178 @@
+[
+  {
+    "scene": "单跳：疾病 -> 检查",
+    "question": "癫痫要做哪些检查？",
+    "answer": "查询到 2 条记录：\n1. 脑电图（建议做）  来源：Q031  证据：癫痫可以做哪些检查\n2. 视频脑电图检查（建议做）  来源：Q031  证据：癫痫可以做哪些检查\n审核状态：课堂参考，未经医学核验",
+    "cypher": "MATCH (d:Disease {name: '癫痫'})-[r:REQUIRES_EXAM]->(e:Examination) RETURN e.name AS 检查, r.scope AS 性质, r.qa_id AS 来源, r.evidence AS 证据 LIMIT 20",
+    "intent": "exam",
+    "source": "fake-rule",
+    "row_count": 2,
+    "ok": true,
+    "elapsed_ms": 6.2
+  },
+  {
+    "scene": "单跳：疾病 -> 症状",
+    "question": "肝硬化有哪些症状？",
+    "answer": "查询到 5 条记录：\n1. 乏力  来源：Q013  证据：肝硬化腹水肚子胀\n2. 腹水  来源：Q013;Q020  证据：肝硬化腹水肚子胀\n3. 腹胀  来源：Q013;Q020  证据：肝硬化腹水肚子胀\n4. 黄疸  来源：Q013  证据：肝硬化腹水肚子胀\n5. 黑便  来源：Q020  证据：肝硬化患者的饮食\n审核状态：课堂参考，未经医学核验",
+    "cypher": "MATCH (d:Disease {name: '肝硬化'})-[r:HAS_SYMPTOM]->(s:Symptom) RETURN s.name AS 症状, r.qa_id AS 来源, r.evidence AS 证据 LIMIT 20",
+    "intent": "symptom",
+    "source": "fake-rule",
+    "row_count": 5,
+    "ok": true,
+    "elapsed_ms": 4.8
+  },
+  {
+    "scene": "单跳：疾病 -> 用药",
+    "question": "心力衰竭吃什么药？",
+    "answer": "查询到 1 条记录：\n1. 呋塞米  来源：Q004  证据：晚上躺不平双腿水肿\n审核状态：课堂参考，未经医学核验",
+    "cypher": "MATCH (d:Disease {name: '心力衰竭'})-[r:USES_DRUG]->(dr:Drug) RETURN dr.name AS 药品, r.qa_id AS 来源, r.evidence AS 证据 LIMIT 20",
+    "intent": "drug",
+    "source": "fake-rule",
+    "row_count": 1,
+    "ok": true,
+    "elapsed_ms": 6.0
+  },
+  {
+    "scene": "单跳：疾病 -> 科室",
+    "question": "偏头痛属于哪个科室？",
+    "answer": "偏头痛 属于 神经内科。\n审核状态：课堂参考，未经医学核验",
+    "cypher": "MATCH (d:Disease {name: '偏头痛'})-[r:BELONGS_TO]->(dept:Department) RETURN dept.name AS 科室, r.qa_id AS 来源 LIMIT 5",
+    "intent": "department",
+    "source": "fake-rule",
+    "row_count": 1,
+    "ok": true,
+    "elapsed_ms": 3.7
+  },
+  {
+    "scene": "反向：症状 -> 疾病",
+    "question": "哪些疾病会出现头痛？",
+    "answer": "查询到 1 条记录：\n1. 偏头痛  来源：Q032  证据：一侧头痛反复发作\n审核状态：课堂参考，未经医学核验",
+    "cypher": "MATCH (d:Disease)-[r:HAS_SYMPTOM]->(s:Symptom {name: '头痛'}) RETURN d.name AS 疾病, r.qa_id AS 来源, r.evidence AS 证据 LIMIT 20",
+    "intent": "diseases_by_symptom",
+    "source": "fake-rule",
+    "row_count": 1,
+    "ok": true,
+    "elapsed_ms": 3.4
+  },
+  {
+    "scene": "反向：药品 -> 疾病",
+    "question": "哪些疾病需要用奥美拉唑？",
+    "answer": "查询到 3 条记录：\n1. 慢性胃炎  来源：Q022\n2. 胃溃疡  来源：Q023\n3. 胃食管反流病  来源：Q021\n审核状态：课堂参考，未经医学核验",
+    "cypher": "MATCH (d:Disease)-[r:USES_DRUG]->(dr:Drug {name: '奥美拉唑'}) RETURN d.name AS 疾病, r.qa_id AS 来源 LIMIT 20",
+    "intent": "diseases_by_drug",
+    "source": "fake-rule",
+    "row_count": 3,
+    "ok": true,
+    "elapsed_ms": 3.6
+  },
+  {
+    "scene": "多跳：两个疾病的共同用药",
+    "question": "脑梗死和冠心病有没有相同的用药？",
+    "answer": "查询到 2 条记录：\n1. 阿司匹林\n2. 阿托伐他汀\n审核状态：课堂参考，未经医学核验",
+    "cypher": "MATCH (a:Disease {name: '脑梗死'})-[:USES_DRUG]->(dr:Drug)<-[:USES_DRUG]-(b:Disease {name: '冠心病'}) RETURN dr.name AS 共同药品 LIMIT 10",
+    "intent": "shared_drug",
+    "source": "fake-rule",
+    "row_count": 2,
+    "ok": true,
+    "elapsed_ms": 5.0
+  },
+  {
+    "scene": "聚合：疾病计数",
+    "question": "图谱里一共有多少种疾病？",
+    "answer": "图谱中共有 33 种疾病。",
+    "cypher": "MATCH (d:Disease) RETURN count(d) AS 疾病数",
+    "intent": "count_disease",
+    "source": "fake-rule",
+    "row_count": 1,
+    "ok": true,
+    "elapsed_ms": 118.3
+  },
+  {
+    "scene": "多轮：检查 -> 科室",
+    "question": "癫痫要做哪些检查？",
+    "answer": "查询到 2 条记录：\n1. 脑电图（建议做）  来源：Q031  证据：癫痫可以做哪些检查\n2. 视频脑电图检查（建议做）  来源：Q031  证据：癫痫可以做哪些检查\n审核状态：课堂参考，未经医学核验",
+    "cypher": "MATCH (d:Disease {name: '癫痫'})-[r:REQUIRES_EXAM]->(e:Examination) RETURN e.name AS 检查, r.scope AS 性质, r.qa_id AS 来源, r.evidence AS 证据 LIMIT 20",
+    "intent": "exam",
+    "source": "fake-rule",
+    "row_count": 2,
+    "ok": true,
+    "elapsed_ms": 18.6
+  },
+  {
+    "scene": "多轮：检查 -> 科室",
+    "question": "那属于哪个科室？",
+    "answer": "癫痫 属于 神经内科。\n审核状态：课堂参考，未经医学核验",
+    "cypher": "MATCH (d:Disease {name: '癫痫'})-[r:BELONGS_TO]->(dept:Department) RETURN dept.name AS 科室, r.qa_id AS 来源 LIMIT 5",
+    "intent": "department",
+    "source": "fake-rule",
+    "row_count": 1,
+    "ok": true,
+    "elapsed_ms": 6.3
+  },
+  {
+    "scene": "多轮：症状 -> 用药 -> 检查",
+    "question": "胃溃疡有哪些症状？",
+    "answer": "查询到 3 条记录：\n1. 上腹痛  来源：Q023  证据：胃溃疡会癌变吗\n2. 反酸  来源：Q023  证据：胃溃疡会癌变吗\n3. 恶心  来源：Q023  证据：胃溃疡会癌变吗\n审核状态：课堂参考，未经医学核验",
+    "cypher": "MATCH (d:Disease {name: '胃溃疡'})-[r:HAS_SYMPTOM]->(s:Symptom) RETURN s.name AS 症状, r.qa_id AS 来源, r.evidence AS 证据 LIMIT 20",
+    "intent": "symptom",
+    "source": "fake-rule",
+    "row_count": 3,
+    "ok": true,
+    "elapsed_ms": 13.7
+  },
+  {
+    "scene": "多轮：症状 -> 用药 -> 检查",
+    "question": "吃什么药？",
+    "answer": "查询到 1 条记录：\n1. 奥美拉唑  来源：Q023  证据：胃溃疡会癌变吗\n审核状态：课堂参考，未经医学核验",
+    "cypher": "MATCH (d:Disease {name: '胃溃疡'})-[r:USES_DRUG]->(dr:Drug) RETURN dr.name AS 药品, r.qa_id AS 来源, r.evidence AS 证据 LIMIT 20",
+    "intent": "drug",
+    "source": "fake-rule",
+    "row_count": 1,
+    "ok": true,
+    "elapsed_ms": 10.6
+  },
+  {
+    "scene": "多轮：症状 -> 用药 -> 检查",
+    "question": "那要做什么检查？",
+    "answer": "查询到 1 条记录：\n1. 胃镜（未说明）  来源：Q023  证据：胃溃疡会癌变吗\n审核状态：课堂参考，未经医学核验",
+    "cypher": "MATCH (d:Disease {name: '胃溃疡'})-[r:REQUIRES_EXAM]->(e:Examination) RETURN e.name AS 检查, r.scope AS 性质, r.qa_id AS 来源, r.evidence AS 证据 LIMIT 20",
+    "intent": "exam",
+    "source": "fake-rule",
+    "row_count": 1,
+    "ok": true,
+    "elapsed_ms": 6.9
+  },
+  {
+    "scene": "实体存在但缺关系",
+    "question": "糖尿病有哪些症状？",
+    "answer": "当前图谱中没有查到相关记录。\n可能原因：该实体尚未入库，或课堂问答里没有提到这层关系。",
+    "cypher": "MATCH (d:Disease {name: '糖尿病'})-[r:HAS_SYMPTOM]->(s:Symptom) RETURN s.name AS 症状, r.qa_id AS 来源, r.evidence AS 证据 LIMIT 20",
+    "intent": "symptom",
+    "source": "fake-rule",
+    "row_count": 0,
+    "ok": false,
+    "elapsed_ms": 7.7
+  },
+  {
+    "scene": "实体未入库",
+    "question": "青光眼用什么药？",
+    "answer": "当前图谱无法回答：问句里没有出现图谱中已有的疾病/症状/药品/检查实体。",
+    "cypher": "",
+    "intent": "drug",
+    "source": "fake-rule",
+    "row_count": 0,
+    "ok": false,
+    "elapsed_ms": 0.4
+  },
+  {
+    "scene": "域外问题",
+    "question": "今天天气怎么样？",
+    "answer": "抱歉，没听懂这个问题。\n可以这样问：\n  · 高血压有哪些症状？\n  · 癫痫属于哪个科室？\n  · 心力衰竭吃什么药？\n  · 冠心病需要做哪些检查？\n  · 哪些疾病会出现头痛？\n  · 图谱里一共有多少种疾病？\n追问示例：问完“癫痫有哪些症状”后，直接问“那属于哪个科室”也会自动补全疾病。",
+    "cypher": "",
+    "intent": "unknown",
+    "source": "",
+    "row_count": 0,
+    "ok": false,
+    "elapsed_ms": 0.4
+  }
+]

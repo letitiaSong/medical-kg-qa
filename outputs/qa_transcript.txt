@@ -1,0 +1,139 @@
+===== 医学知识图谱问答系统 · 对话记录 =====
+图库：tugraph-rest（已连接 TuGraph REST：http://127.0.0.1:7070 / graph=medical_course_2026）
+节点 93 个 / 关系 138 条
+模型：rule-template-v1（fake-rule）
+
+--- 场景 1：单跳：疾病 -> 检查 ---
+问题> 癫痫要做哪些检查？
+回答> 查询到 2 条记录：
+1. 脑电图（建议做）  来源：Q031  证据：癫痫可以做哪些检查
+2. 视频脑电图检查（建议做）  来源：Q031  证据：癫痫可以做哪些检查
+审核状态：课堂参考，未经医学核验
+Cypher> MATCH (d:Disease {name: '癫痫'})-[r:REQUIRES_EXAM]->(e:Examination) RETURN e.name AS 检查, r.scope AS 性质, r.qa_id AS 来源, r.evidence AS 证据 LIMIT 20
+[状态] intent=exam source=fake-rule rows=2 行 耗时=6ms
+
+--- 场景 2：单跳：疾病 -> 症状 ---
+问题> 肝硬化有哪些症状？
+回答> 查询到 5 条记录：
+1. 乏力  来源：Q013  证据：肝硬化腹水肚子胀
+2. 腹水  来源：Q013;Q020  证据：肝硬化腹水肚子胀
+3. 腹胀  来源：Q013;Q020  证据：肝硬化腹水肚子胀
+4. 黄疸  来源：Q013  证据：肝硬化腹水肚子胀
+5. 黑便  来源：Q020  证据：肝硬化患者的饮食
+审核状态：课堂参考，未经医学核验
+Cypher> MATCH (d:Disease {name: '肝硬化'})-[r:HAS_SYMPTOM]->(s:Symptom) RETURN s.name AS 症状, r.qa_id AS 来源, r.evidence AS 证据 LIMIT 20
+[状态] intent=symptom source=fake-rule rows=5 行 耗时=5ms
+
+--- 场景 3：单跳：疾病 -> 用药 ---
+问题> 心力衰竭吃什么药？
+回答> 查询到 1 条记录：
+1. 呋塞米  来源：Q004  证据：晚上躺不平双腿水肿
+审核状态：课堂参考，未经医学核验
+Cypher> MATCH (d:Disease {name: '心力衰竭'})-[r:USES_DRUG]->(dr:Drug) RETURN dr.name AS 药品, r.qa_id AS 来源, r.evidence AS 证据 LIMIT 20
+[状态] intent=drug source=fake-rule rows=1 行 耗时=6ms
+
+--- 场景 4：单跳：疾病 -> 科室 ---
+问题> 偏头痛属于哪个科室？
+回答> 偏头痛 属于 神经内科。
+审核状态：课堂参考，未经医学核验
+Cypher> MATCH (d:Disease {name: '偏头痛'})-[r:BELONGS_TO]->(dept:Department) RETURN dept.name AS 科室, r.qa_id AS 来源 LIMIT 5
+[状态] intent=department source=fake-rule rows=1 行 耗时=4ms
+
+--- 场景 5：反向：症状 -> 疾病 ---
+问题> 哪些疾病会出现头痛？
+回答> 查询到 1 条记录：
+1. 偏头痛  来源：Q032  证据：一侧头痛反复发作
+审核状态：课堂参考，未经医学核验
+Cypher> MATCH (d:Disease)-[r:HAS_SYMPTOM]->(s:Symptom {name: '头痛'}) RETURN d.name AS 疾病, r.qa_id AS 来源, r.evidence AS 证据 LIMIT 20
+[状态] intent=diseases_by_symptom source=fake-rule rows=1 行 耗时=3ms
+
+--- 场景 6：反向：药品 -> 疾病 ---
+问题> 哪些疾病需要用奥美拉唑？
+回答> 查询到 3 条记录：
+1. 慢性胃炎  来源：Q022
+2. 胃溃疡  来源：Q023
+3. 胃食管反流病  来源：Q021
+审核状态：课堂参考，未经医学核验
+Cypher> MATCH (d:Disease)-[r:USES_DRUG]->(dr:Drug {name: '奥美拉唑'}) RETURN d.name AS 疾病, r.qa_id AS 来源 LIMIT 20
+[状态] intent=diseases_by_drug source=fake-rule rows=3 行 耗时=4ms
+
+--- 场景 7：多跳：两个疾病的共同用药 ---
+问题> 脑梗死和冠心病有没有相同的用药？
+回答> 查询到 2 条记录：
+1. 阿司匹林
+2. 阿托伐他汀
+审核状态：课堂参考，未经医学核验
+Cypher> MATCH (a:Disease {name: '脑梗死'})-[:USES_DRUG]->(dr:Drug)<-[:USES_DRUG]-(b:Disease {name: '冠心病'}) RETURN dr.name AS 共同药品 LIMIT 10
+[状态] intent=shared_drug source=fake-rule rows=2 行 耗时=5ms
+
+--- 场景 8：聚合：疾病计数 ---
+问题> 图谱里一共有多少种疾病？
+回答> 图谱中共有 33 种疾病。
+Cypher> MATCH (d:Disease) RETURN count(d) AS 疾病数
+[状态] intent=count_disease source=fake-rule rows=1 行 耗时=118ms
+
+--- 场景 9：多轮：检查 -> 科室 ---
+问题> 癫痫要做哪些检查？
+回答> 查询到 2 条记录：
+1. 脑电图（建议做）  来源：Q031  证据：癫痫可以做哪些检查
+2. 视频脑电图检查（建议做）  来源：Q031  证据：癫痫可以做哪些检查
+审核状态：课堂参考，未经医学核验
+Cypher> MATCH (d:Disease {name: '癫痫'})-[r:REQUIRES_EXAM]->(e:Examination) RETURN e.name AS 检查, r.scope AS 性质, r.qa_id AS 来源, r.evidence AS 证据 LIMIT 20
+[状态] intent=exam source=fake-rule rows=2 行 耗时=19ms
+
+问题> 那属于哪个科室？
+回答> 癫痫 属于 神经内科。
+审核状态：课堂参考，未经医学核验
+Cypher> MATCH (d:Disease {name: '癫痫'})-[r:BELONGS_TO]->(dept:Department) RETURN dept.name AS 科室, r.qa_id AS 来源 LIMIT 5
+[状态] intent=department source=fake-rule rows=1 行 耗时=6ms
+
+--- 场景 10：多轮：症状 -> 用药 -> 检查 ---
+问题> 胃溃疡有哪些症状？
+回答> 查询到 3 条记录：
+1. 上腹痛  来源：Q023  证据：胃溃疡会癌变吗
+2. 反酸  来源：Q023  证据：胃溃疡会癌变吗
+3. 恶心  来源：Q023  证据：胃溃疡会癌变吗
+审核状态：课堂参考，未经医学核验
+Cypher> MATCH (d:Disease {name: '胃溃疡'})-[r:HAS_SYMPTOM]->(s:Symptom) RETURN s.name AS 症状, r.qa_id AS 来源, r.evidence AS 证据 LIMIT 20
+[状态] intent=symptom source=fake-rule rows=3 行 耗时=14ms
+
+问题> 吃什么药？
+回答> 查询到 1 条记录：
+1. 奥美拉唑  来源：Q023  证据：胃溃疡会癌变吗
+审核状态：课堂参考，未经医学核验
+Cypher> MATCH (d:Disease {name: '胃溃疡'})-[r:USES_DRUG]->(dr:Drug) RETURN dr.name AS 药品, r.qa_id AS 来源, r.evidence AS 证据 LIMIT 20
+[状态] intent=drug source=fake-rule rows=1 行 耗时=11ms
+
+问题> 那要做什么检查？
+回答> 查询到 1 条记录：
+1. 胃镜（未说明）  来源：Q023  证据：胃溃疡会癌变吗
+审核状态：课堂参考，未经医学核验
+Cypher> MATCH (d:Disease {name: '胃溃疡'})-[r:REQUIRES_EXAM]->(e:Examination) RETURN e.name AS 检查, r.scope AS 性质, r.qa_id AS 来源, r.evidence AS 证据 LIMIT 20
+[状态] intent=exam source=fake-rule rows=1 行 耗时=7ms
+
+--- 场景 11：实体存在但缺关系 ---
+问题> 糖尿病有哪些症状？
+回答> 当前图谱中没有查到相关记录。
+可能原因：该实体尚未入库，或课堂问答里没有提到这层关系。
+Cypher> MATCH (d:Disease {name: '糖尿病'})-[r:HAS_SYMPTOM]->(s:Symptom) RETURN s.name AS 症状, r.qa_id AS 来源, r.evidence AS 证据 LIMIT 20
+[状态] intent=symptom source=fake-rule rows=0 行 耗时=8ms
+
+--- 场景 12：实体未入库 ---
+问题> 青光眼用什么药？
+回答> 当前图谱无法回答：问句里没有出现图谱中已有的疾病/症状/药品/检查实体。
+[状态] intent=drug source=fake-rule rows=0 行 耗时=0ms
+
+--- 场景 13：域外问题 ---
+问题> 今天天气怎么样？
+回答> 抱歉，没听懂这个问题。
+可以这样问：
+  · 高血压有哪些症状？
+  · 癫痫属于哪个科室？
+  · 心力衰竭吃什么药？
+  · 冠心病需要做哪些检查？
+  · 哪些疾病会出现头痛？
+  · 图谱里一共有多少种疾病？
+追问示例：问完“癫痫有哪些症状”后，直接问“那属于哪个科室”也会自动补全疾病。
+[状态] intent=unknown source= rows=0 行 耗时=0ms
+
+问答结束。

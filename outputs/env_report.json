@@ -1,0 +1,90 @@
+{
+  "python": "3.12.14",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "project_root": "E:\\工作\\医疗图谱\\medical_kg_qa",
+  "tugraph": {
+    "url": "http://127.0.0.1:7070",
+    "graph": "medical_course_2026",
+    "password": {
+      "host": "127.0.0.1",
+      "port": 7070,
+      "user": "admin",
+      "password": "***",
+      "graph": "medical_course_2026",
+      "mode": "auto"
+    }
+  },
+  "llm": {
+    "model": "qwen-plus",
+    "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+    "configured": false,
+    "mode": "auto"
+  },
+  "items": [
+    {
+      "item": "Python 版本",
+      "status": "OK",
+      "detail": "3.12.14（要求 ≥ 3.9）"
+    },
+    {
+      "item": "第三方依赖",
+      "status": "OK",
+      "detail": "requests / pandas / fastapi / uvicorn / dotenv 均已安装"
+    },
+    {
+      "item": "TuGraph 地址",
+      "status": "OK",
+      "detail": "http://127.0.0.1:7070（图 medical_course_2026，账号 admin）"
+    },
+    {
+      "item": "TuGraph 密码",
+      "status": "OK",
+      "detail": "admin / ***（.env 中配置）"
+    },
+    {
+      "item": "大模型配置",
+      "status": "WARN",
+      "detail": "未配置 DASHSCOPE_API_KEY，将使用离线规则模型（--llm fake）"
+    },
+    {
+      "item": "原始问答数据",
+      "status": "OK",
+      "detail": "data\\raw\\qa_medical_40.csv（40 行）"
+    },
+    {
+      "item": "清洗后数据",
+      "status": "OK",
+      "detail": "data\\clean\\qa_clean.csv（40 行）"
+    },
+    {
+      "item": "实体词典",
+      "status": "OK",
+      "detail": "data\\dict\\medical_entities.csv（93 行）"
+    },
+    {
+      "item": "Text2Cypher 测例",
+      "status": "OK",
+      "detail": "data\\testset\\t2c_testset.csv（73 行）"
+    },
+    {
+      "item": "离线图库",
+      "status": "OK",
+      "detail": "outputs\\mock_graph.json（54 KB）"
+    },
+    {
+      "item": "TuGraph 连接",
+      "status": "OK",
+      "detail": "tugraph-rest，节点 93 / 关系 138"
+    },
+    {
+      "item": "TuGraph 版本",
+      "status": "OK",
+      "detail": "{\"backend\": \"tugraph-rest\", \"base_url\": \"http://127.0.0.1:7070\", \"graph\": \"medical_course_2026\", \"user\": \"admin\", \"auth\""
+    }
+  ],
+  "summary": {
+    "OK": 11,
+    "WARN": 1,
+    "FAIL": 0
+  }
+}

@@ -1,0 +1,23 @@
+﻿==============================================================
+步骤 1 / 环境自检
+==============================================================
+项目目录：E:\工作\医疗图谱\medical_kg_qa
+数据目录：E:\工作\医疗图谱\medical_kg_qa\data
+
+[✓] Python 版本              3.12.14（要求 ≥ 3.9）
+[✓] 第三方依赖                  requests / pandas / fastapi / uvicorn / dotenv 均已安装
+[✓] TuGraph 地址             http://127.0.0.1:7070（图 medical_course_2026，账号 admin）
+[✓] TuGraph 密码             admin / ***（.env 中配置）
+[!] 大模型配置                  未配置 DASHSCOPE_API_KEY，将使用离线规则模型（--llm fake）
+[✓] 原始问答数据                 data\raw\qa_medical_40.csv（40 行）
+[✓] 清洗后数据                  data\clean\qa_clean.csv（40 行）
+[✓] 实体词典                   data\dict\medical_entities.csv（93 行）
+[✓] Text2Cypher 测例         data\testset\t2c_testset.csv（73 行）
+[✓] 离线图库                   outputs\mock_graph.json（54 KB）
+[✓] TuGraph 连接             tugraph-rest，节点 93 / 关系 138
+[✓] TuGraph 版本             {"backend": "tugraph-rest", "base_url": "http://127.0.0.1:7070", "graph": "medical_course_2026", "user": "admin", "auth"
+
+合计：正常 11 项，提醒 1 项，失败 0 项
+自检报告已写入 E:\工作\医疗图谱\medical_kg_qa\outputs\env_report.json
+
+下一步：python scripts/test_connection.py    # 测试 TuGraph 客户端连接

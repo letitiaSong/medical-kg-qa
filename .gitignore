@@ -1,0 +1,28 @@
+# 环境与密钥
+.env
+*.local
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+
+# 运行时日志（可保留评测结果，日志不入库）
+*.log
+!docs/日志示例/*.log
+
+# 编辑器 / 系统
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# 临时文件
+~$*
+*.tmp
+docs/实验报告.docx
+docs/实验报告.pdf
+

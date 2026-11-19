@@ -1,0 +1,97 @@
+﻿==============================================================
+步骤 2 / 图谱构建与导入
+==============================================================
+读取清洗数据 40 条，词典 93 个实体
+
+[1/4] 实体识别 + 关系抽取 + 知识融合 ...
+  节点 93 个，关系 138 条
+  节点分布：Department 4，Disease 33，Drug 13，Examination 18，Symptom 25
+  关系分布：BELONGS_TO 32，HAS_SYMPTOM 46，REQUIRES_EXAM 39，USES_DRUG 21
+  同义合并 22 次，多来源关系 16 条，待审核 11 项
+
+[2/4] 导出 CSV / import.yaml ...
+  nodes: E:\工作\医疗图谱\medical_kg_qa\data\graph\nodes.csv
+  edges: E:\工作\医疗图谱\medical_kg_qa\data\graph\edges.csv
+  import_yaml: E:\工作\医疗图谱\medical_kg_qa\data\graph\import.yaml
+  review: E:\工作\医疗图谱\medical_kg_qa\data\graph\review_items.csv
+  stats: E:\工作\医疗图谱\medical_kg_qa\data\graph\graph_stats.json
+
+[3/4] 写入图库 ...
+已连接 TuGraph REST：http://127.0.0.1:7070 / graph=medical_course_2026
+  已连接 TuGraph REST：http://127.0.0.1:7070 / graph=medical_course_2026
+  已写入节点 93 个，关系 138 条
+
+[4/4] 用标准 Cypher 验证入库结果 ...
+
+  · 图谱规模（1 行，2.3 ms）
+    MATCH (n) RETURN count(n) AS 节点数
+    节点数
+    ---
+    93 
+
+  · 关系规模（1 行，2.2 ms）
+    MATCH ()-[r]->() RETURN count(r) AS 关系数
+    关系数
+    ---
+    138
+
+  · 标签分布（5 行，2.0 ms）
+    MATCH (n) RETURN n.id AS 名称 LIMIT 5
+    名称   
+    -----
+    心血管内科
+    消化内科 
+    神经内科 
+    肝病科  
+    三叉神经痛
+
+  · 疾病-症状抽样（5 行，3.8 ms）
+    MATCH (d:Disease)-[r:HAS_SYMPTOM]->(s:Symptom) RETURN d.name AS 疾病, s.name AS 症状, r.qa_id AS 来源 LIMIT 5
+    疾病     | 症状 | 来源  
+    -------+----+-----
+    上消化道出血 | 乏力 | Q030
+    上消化道出血 | 头晕 | Q030
+    上消化道出血 | 黑便 | Q030
+    偏头痛    | 头痛 | Q032
+    偏头痛    | 恶心 | Q032
+
+  · 疾病-检查抽样（5 行，2.8 ms）
+    MATCH (d:Disease)-[r:REQUIRES_EXAM]->(e:Examination) RETURN d.name AS 疾病, e.name AS 检查, r.scope AS 性质 LIMIT 5
+    疾病      | 检查    | 性质         
+    --------+-------+------------
+    上消化道出血  | 胃镜    | unspecified
+    上消化道出血  | 血常规   | unspecified
+    乙型病毒性肝炎 | 肝功能检查 | recommend  
+    乙型病毒性肝炎 | 腹部超声  | recommend  
+    偏头痛     | 头颅CT  | recommend  
+
+  · 癫痫相关（5 行，2.3 ms）
+    MATCH (d:Disease {name: '癫痫'})-[r]->(x) RETURN x.name AS 关联实体, r.qa_id AS 来源 LIMIT 10
+    关联实体    | 来源  
+    --------+-----
+    卡马西平    | Q031
+    左乙拉西坦   | Q031
+    神经内科    | Q031
+    脑电图     | Q031
+    视频脑电图检查 | Q031
+
+图谱质量评估：
+  节点数: 93
+  关系数: 138
+  节点标签覆盖: 5/5
+  关系类型覆盖: 4/4
+  Schema合规率: 100.00%
+  属性完整率: 100.00%
+  重复三元组: 0
+  检查强度不一致: 2
+  待人工审核项: 11
+  孤立节点: 3
+  弱连通分量: 4
+  最大连通分量占比: 96.77%
+  平均度: 2.97
+  问答覆盖率: 92.50%
+  科室覆盖: 4/4
+
+质量报告已写入 E:\工作\医疗图谱\medical_kg_qa\outputs\graph_quality.json
+
+完成。下一步：python scripts/03_verify_graph.py 查看检索与问答效果。

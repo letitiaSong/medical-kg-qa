@@ -1,0 +1,43 @@
+{
+  "qa_total": 40,
+  "nodes": 93,
+  "nodes_by_label": {
+    "Disease": 33,
+    "Symptom": 25,
+    "Examination": 18,
+    "Drug": 13,
+    "Department": 4
+  },
+  "edges": 138,
+  "edges_by_rel": {
+    "HAS_SYMPTOM": 46,
+    "REQUIRES_EXAM": 39,
+    "USES_DRUG": 21,
+    "BELONGS_TO": 32
+  },
+  "isolated_nodes": [
+    "Disease:糖尿病",
+    "Symptom:体重下降",
+    "Disease:面神经炎"
+  ],
+  "alias_merges": {
+    "血压": 3,
+    "胆结石": 3,
+    "测量血压": 2,
+    "乙肝": 2,
+    "耳石症": 2,
+    "血压高": 1,
+    "房颤": 1,
+    "心衰": 1,
+    "下肢水肿": 1,
+    "血脂高": 1,
+    "心梗": 1,
+    "踝部水肿": 1,
+    "乙肝小三阳": 1,
+    "酒精肝": 1,
+    "消化道出血": 1
+  },
+  "multi_source_edges": 16,
+  "review_items": 11,
+  "ner_mode": "synonym"
+}

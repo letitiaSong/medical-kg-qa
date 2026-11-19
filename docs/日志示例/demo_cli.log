@@ -1,0 +1,82 @@
+﻿已连接 TuGraph REST：http://127.0.0.1:7070 / graph=medical_course_2026
+===== 医学知识图谱问答系统 =====
+图谱：tugraph-rest　节点 93 个 / 关系 138 条
+模型：rule-template-v1（fake-rule）
+输入问题开始问答，exit 退出，help 查看示例。
+
+问题> 癫痫要做什么检查？
+
+查询到 2 条记录：
+1. 脑电图（建议做）  来源：Q031  证据：癫痫可以做哪些检查
+2. 视频脑电图检查（建议做）  来源：Q031  证据：癫痫可以做哪些检查
+审核状态：课堂参考，未经医学核验
+
+Cypher：MATCH (d:Disease {name: '癫痫'})-[r:REQUIRES_EXAM]->(e:Examination) RETURN e.name AS 检查, r.scope AS 性质, r.qa_id AS 来源, r.evidence AS 证据 LIMIT 20
+耗时：5 ms
+
+
+问题> 那属于哪个科室？
+  （结合上文补全为：癫痫 属于哪个科室？）
+
+癫痫 属于 神经内科。
+审核状态：课堂参考，未经医学核验
+
+Cypher：MATCH (d:Disease {name: '癫痫'})-[r:BELONGS_TO]->(dept:Department) RETURN dept.name AS 科室, r.qa_id AS 来源 LIMIT 5
+耗时：3 ms
+
+
+问题> 冠心病有哪些症状？
+
+查询到 2 条记录：
+1. 胸痛  来源：Q002  证据：冠心病会胸口疼吗
+2. 胸闷  来源：Q002  证据：冠心病会胸口疼吗
+审核状态：课堂参考，未经医学核验
+
+Cypher：MATCH (d:Disease {name: '冠心病'})-[r:HAS_SYMPTOM]->(s:Symptom) RETURN s.name AS 症状, r.qa_id AS 来源, r.evidence AS 证据 LIMIT 20
+耗时：3 ms
+
+
+问题> 用什么药？
+  （结合上文补全为：冠心病 用什么药？）
+
+查询到 2 条记录：
+1. 阿司匹林  来源：Q002;Q009  证据：冠心病会胸口疼吗
+2. 阿托伐他汀  来源：Q002  证据：冠心病会胸口疼吗
+审核状态：课堂参考，未经医学核验
+
+Cypher：MATCH (d:Disease {name: '冠心病'})-[r:USES_DRUG]->(dr:Drug) RETURN dr.name AS 药品, r.qa_id AS 来源, r.evidence AS 证据 LIMIT 20
+耗时：4 ms
+
+
+问题> 哪些疾病会出现头痛？
+
+查询到 1 条记录：
+1. 偏头痛  来源：Q032  证据：一侧头痛反复发作
+审核状态：课堂参考，未经医学核验
+
+Cypher：MATCH (d:Disease)-[r:HAS_SYMPTOM]->(s:Symptom {name: '头痛'}) RETURN d.name AS 疾病, r.qa_id AS 来源, r.evidence AS 证据 LIMIT 20
+耗时：3 ms
+
+
+问题> 图谱里一共有多少种疾病？
+
+图谱中共有 33 种疾病。
+
+Cypher：MATCH (d:Disease) RETURN count(d) AS 疾病数
+耗时：187 ms
+
+
+问题> 今天天气怎么样？
+
+抱歉，没听懂这个问题。
+可以这样问：
+  · 高血压有哪些症状？
+  · 癫痫属于哪个科室？
+  · 心力衰竭吃什么药？
+  · 冠心病需要做哪些检查？
+  · 哪些疾病会出现头痛？
+  · 图谱里一共有多少种疾病？
+追问示例：问完“癫痫有哪些症状”后，直接问“那属于哪个科室”也会自动补全疾病。
+耗时：0 ms
+
+问答结束。
